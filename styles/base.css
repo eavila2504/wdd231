@@ -1,0 +1,38 @@
+* {
+  box-sizing: border-box;
+ font-family: 'Josefin Sans', sans-serif;
+  
+}
+/********************* Header *********************/
+
+header {
+  display: grid;
+  grid-template-columns: 24px auto 44px;
+  padding: 5px 0 5px 10px;
+  align-items: end;
+  border-bottom: solid 1px #ddd;
+  column-gap: 35px;
+}
+
+header img {
+  display: block;  
+  width: 280%;
+  height: auto;
+}
+header span {
+    font-size: 1.5rem;
+    color: #000000;
+}
+
+/******************* Hamburger *********************/
+.hamburger
+{
+    background: none;
+    border: none;
+    color: #000000;
+    cursor: pointer;
+}
+.hamburger::after{
+      content: "\2630";
+        font-size: 2rem;
+    }
