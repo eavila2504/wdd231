@@ -11,17 +11,19 @@ header {
   padding: 5px 0 5px 10px;
   align-items: end;
   border-bottom: solid 1px #ddd;
-  column-gap: 35px;
+  column-gap: 25px;
 }
 
 header img {
   display: block;  
-  width: 280%;
+  width: 220%;
   height: auto;
+  padding: 1px;
 }
 header span {
     font-size: 1.5rem;
     color: #000000;
+    padding-bottom: 10px;
 }
 
 /******************* Hamburger *********************/
@@ -29,10 +31,15 @@ header span {
 {
     background: none;
     border: none;
+    font-size: 2rem;
     color: #000000;
     cursor: pointer;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-.hamburger::after{
+.hamburger::before{
       content: "\2630";
         font-size: 2rem;
+    }
+.hamburger.show::before{
+      content: "\00D7";
     }
