@@ -43,3 +43,11 @@ header span {
 .hamburger.show::before{
       content: "\00D7";
     }
+
+/******************* Navigation Bar *********************/
+
+.navigation {
+  display: block; 
+}
+
+.navigation ul {display: flex;}
