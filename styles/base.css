@@ -47,7 +47,9 @@ header span {
 /******************* Navigation Bar *********************/
 
 .navigation {
-  display: block; 
+  display: none; 
 }
 
-.navigation ul {display: flex;}
+.navigation.show {
+  display: block;
+}

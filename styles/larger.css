@@ -9,4 +9,12 @@
     .hamburger {
         display: none;
     }
+
+    .navigation {
+        display: block;
+    }
+
+    .navigation ul {
+        display: flex;
+    }
 }
