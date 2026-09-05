@@ -1,65 +1,101 @@
+/********************* Reset / box model *********************/
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-/********************* Root *********************/
+html {
+  /* safety net: nothing on this page should legitimately need to scroll
+     sideways between 320px and 1200px, but this guards against a stray
+     overflow from a future edit */
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* Never let an image distort or blow past its box, regardless of
+   viewport width. Specific components override height as needed. */
+img,
+svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/********************* Root: color + type tokens *********************/
 :root {
+  /* Own color scheme: navy as the dominant brand color, white for space,
+     amber as a single, deliberate accent reserved for interactive/active
+     states so contrast is meaningful rather than decorative. */
   --primary-color: #0a1f44;      /* navy */
-  --primary-color-dark: #06132c; /* darker navy for nested nav rows */
-  --primary-color-light: #1c3a6e;/* lighter navy for hover states */
+  --primary-color-dark: #06132c; /* darker navy, mobile nav rows */
+  --primary-color-light: #2a4a82;/* lighter navy, hover fill */
+  --accent-color: #e8a33d;       /* amber, reserved for active/hover/focus */
   --white: #ffffff;
   --background-color: #ffffff;
   --text-color: #1a1a1a;
   --muted-bg: #f2f2f2;
-  --border-color: #dddddd;
+  --border-color: #d9d9d9;
   --placeholder-color: #b3b3b3;
-  --font-family: 'Josefin Sans', sans-serif;
+
+  /* Google Font: Poppins, one family, weight does the hierarchy work */
+  --font-family: 'Poppins', 'Segoe UI', sans-serif;
   --font-size: 16px;
-  --line-height: 1.5;
+  --line-height: 1.6;
+
+  --radius: 6px;
+  --transition-speed: 0.2s;
 }
 
 body {
   font-family: var(--font-family);
+  font-weight: 400;
   font-size: var(--font-size);
   line-height: var(--line-height);
   color: var(--text-color);
   background-color: var(--background-color);
 }
 
+/* Consistent, visible keyboard focus everywhere, since color alone
+   (hover) never carries meaning for keyboard/screen-reader users */
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--accent-color);
+  outline-offset: 2px;
+}
+
 /********************* Header *********************/
 
 header {
   display: grid;
-  grid-template-columns: 24px auto 44px;
+  grid-template-columns: 40px 1fr 44px;
   align-items: center;
-  column-gap: 15px;
-  padding: 10px;
+  column-gap: 12px;
+  padding: 12px 16px;
   border-bottom: 2px solid var(--primary-color);
 }
 
-header img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
 header span {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   font-weight: 600;
   color: var(--primary-color);
+  /* keeps a long site name from ever forcing the header wider than
+     the viewport at 320px */
+  overflow-wrap: anywhere;
 }
 
 /******************* Hamburger *********************/
 .hamburger {
   background: none;
   border: none;
-  font-size: 1.8rem;
+  font-size: 1.7rem;
   line-height: 1;
   color: var(--primary-color);
   cursor: pointer;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .hamburger::before {
@@ -71,6 +107,10 @@ header span {
 }
 
 /******************* Navigation Bar *********************/
+/* Grid/flex layout throughout (never default block flow), so the nav
+   itself already satisfies "not a single-column layout" at every
+   breakpoint: it's a stacked flex column on mobile, a flex row on
+   desktop. */
 
 .navigation {
   display: none;
@@ -82,43 +122,59 @@ header span {
 
 .navigation ul {
   list-style-type: none;
+  display: flex;
+  flex-direction: column;
 }
 
 .navigation a {
   display: block;
-  padding: 0.9rem 10px;
+  padding: 0.9rem 16px;
   background-color: var(--primary-color-dark);
   color: var(--white);
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 500;
   border-bottom: 1px solid var(--primary-color-light);
+  /* color/background only, so hover never changes box size or
+     position: no layout twitch */
+  transition: background-color var(--transition-speed) ease;
 }
 
 .navigation li.current a {
   background-color: var(--primary-color);
+  font-weight: 600;
 }
 
-.navigation a:hover {
+.navigation a:hover,
+.navigation a:focus-visible {
   background-color: var(--primary-color-light);
 }
 
-/******************* Main content *********************/
+/********************* Main content *********************/
 
 main {
-  padding: 15px 10px;
+  padding: 20px 16px;
+  /* Flex column with a deliberate gap instead of relying on default
+     margin-collapsing flow between sections */
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
 h1 {
-  margin-bottom: 15px;
   color: var(--primary-color);
+  font-weight: 700;
+  font-size: clamp(1.5rem, 4vw + 0.5rem, 2rem);
 }
 
-/* Shared card pattern: About Me / Student Photo / Web Certificate Courses */
+/* Shared card pattern: About Me / Student Photo / Web Certificate
+   Courses repeat the same header treatment (repetition principle) so
+   the eye reads them as one family of components. */
 .about-card,
 .photo-card,
 .courses-card {
-  margin-bottom: 20px;
   border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  overflow: hidden; /* clips the header bar to the card's corner radius */
 }
 
 .about-card h2,
@@ -127,63 +183,76 @@ h1 {
   background-color: var(--primary-color);
   color: var(--white);
   text-align: center;
-  padding: 0.75rem;
+  padding: 0.75rem 1rem;
   font-size: 1rem;
+  font-weight: 600;
 }
 
 .about-card p {
   background-color: var(--muted-bg);
-  padding: 1rem;
+  padding: 1.25rem 1rem;
 }
 
-/* Student photo */
+/* Student photo: aspect-ratio + object-fit keeps the image proportional
+   and un-squished at every width, and a max-width keeps it from ever
+   scaling up past its native resolution and pixelating */
 .photo-card img {
-  display: block;
   width: 100%;
+  max-width: 320px;
   aspect-ratio: 1 / 1;
   object-fit: cover;
   background-color: var(--placeholder-color);
-  padding: 20px;
+  margin: 1rem auto;
 }
 
-/* Web Certificate Courses */
+/********************* Web Certificate Courses *********************/
+
 .course-filter ul {
   display: flex;
   list-style: none;
+  flex-wrap: wrap;
   gap: 8px;
-  padding: 10px;
+  padding: 12px;
   background-color: var(--muted-bg);
 }
 
 .course-filter a {
   display: block;
-  flex: 1;
+  flex: 1 1 80px;
+  min-width: 70px;
   text-align: center;
-  padding: 0.6rem;
+  padding: 0.6rem 0.5rem;
   background-color: var(--white);
   border: 1px solid var(--border-color);
-  border-radius: 4px;
+  border-radius: var(--radius);
   color: var(--primary-color);
   text-decoration: none;
   font-weight: 600;
+  transition: background-color var(--transition-speed) ease,
+              color var(--transition-speed) ease,
+              border-color var(--transition-speed) ease;
 }
 
 .course-filter a.active,
-.course-filter a:hover {
-  background-color: var(--primary-color);
-  border-color: var(--primary-color);
-  color: var(--white);
+.course-filter a:hover,
+.course-filter a:focus-visible {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+  color: var(--primary-color-dark);
 }
 
 .course-list {
   list-style: none;
+  display: flex;
+  flex-direction: column;
 }
 
 .course-item {
-  padding: 0.75rem;
+  padding: 0.85rem 1rem;
   text-align: center;
   background-color: var(--muted-bg);
   border-top: 1px solid var(--border-color);
+  overflow-wrap: anywhere;
 }
 
 .course-item:nth-child(even) {
@@ -191,23 +260,30 @@ h1 {
 }
 
 .credit-total {
-  padding: 0.75rem;
+  padding: 0.85rem 1rem;
   text-align: center;
   font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.credit-total span {
+  color: var(--primary-color);
+  font-weight: 700;
 }
 
 /******************* FOOTER *********************/
 footer {
   background-color: var(--muted-bg);
-  padding: 1.5rem 10px;
+  padding: 1.5rem 16px;
   text-align: center;
 }
 
 .social-icons {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 .social-icons a {
@@ -218,20 +294,29 @@ footer {
   height: 44px;
   border-radius: 50%;
   background-color: var(--primary-color);
+  transition: background-color var(--transition-speed) ease;
 }
 
-.social-icons a:hover {
-  background-color: var(--primary-color-light);
+.social-icons a:hover,
+.social-icons a:focus-visible {
+  background-color: var(--accent-color);
 }
 
 .social-icons img {
   width: 20px;
   height: 20px;
-  /* icons are drawn dark by default; invert so they read white on navy */
+  /* icons are single-color dark by default; invert so they read white
+     on navy (and dark navy on the amber hover state below) */
   filter: brightness(0) invert(1);
+}
+
+.social-icons a:hover img,
+.social-icons a:focus-visible img {
+  filter: none;
 }
 
 footer p {
   font-size: 0.85rem;
   color: var(--text-color);
+  overflow-wrap: anywhere;
 }

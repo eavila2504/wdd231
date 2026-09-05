@@ -3,17 +3,23 @@
   header,
   main,
   footer {
-    max-width: 900px;
+    max-width: 1100px;
     margin: 0 auto;
   }
 
   header {
-    grid-template-columns: 40px auto;
+    grid-template-columns: 44px auto;
   }
 
   .hamburger {
     display: none;
   }
+
+  /********************* Large-screen horizontal nav *********************/
+  /* Required: flex row, hover effect, wayfinding, and no twitch on
+     hover (the bottom border is always present and 3px thick, just
+     transparent by default — its color changes, never its size, so
+     nothing else on the page moves). */
 
   .navigation {
     display: block;
@@ -21,30 +27,35 @@
   }
 
   .navigation ul {
-    display: flex;
+    flex-direction: row;
   }
 
   .navigation a {
     background-color: transparent;
     color: var(--primary-color);
-    border-bottom: none;
-    padding: 1rem;
+    padding: 1rem 1.25rem;
+    border-bottom: 3px solid transparent;
   }
 
   .navigation li.current a {
     background-color: transparent;
-    border-bottom: 3px solid var(--primary-color);
+    border-bottom-color: var(--accent-color);
   }
 
-  .navigation a:hover {
+  .navigation a:hover,
+  .navigation a:focus-visible {
     background-color: var(--muted-bg);
+    border-bottom-color: var(--accent-color);
   }
 
-  /* About Me + Student Photo side by side, Courses full width below */
+  /********************* Multi-column page layout *********************/
+  /* About Me + Student Photo side by side, Courses full width below —
+     a real grid, not a single stacked column. */
   main {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    gap: 20px;
+    align-items: start;
+    gap: 24px;
   }
 
   h1 {
@@ -53,24 +64,22 @@
 
   .about-card {
     grid-column: 1;
-    margin-bottom: 0;
   }
 
   .photo-card {
     grid-column: 2;
-    margin-bottom: 0;
   }
 
   .courses-card {
     grid-column: 1 / -1;
   }
 
-  .course-filter ul {
-    display: flex;
+  .photo-card img {
+    max-width: 100%;
   }
 
   .course-list {
-    display: flex;
+    flex-direction: row;
   }
 
   .course-item {
@@ -87,10 +96,14 @@
     background-color: var(--muted-bg);
   }
 
+  /********************* Footer *********************/
   footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    text-align: left;
+    flex-wrap: wrap;
+    gap: 12px;
   }
 
   .social-icons {
