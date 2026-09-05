@@ -1,24 +1,99 @@
 @media only screen and (min-width: 38rem) {
-    header, main, footer {
-        max-width: 900px;
-        margin: 0 auto;}
-        
-        header{
-            grid-template-columns: 24px auto 44px;
-        }
-    .hamburger {
-        display: none;
-    }
 
-    .navigation {
-        display: block;
-        border-bottom: solid 1px #eee;
-    }
+  header,
+  main,
+  footer {
+    max-width: 900px;
+    margin: 0 auto;
+  }
 
-    .navigation ul {
-        display: flex;
-    }
-    .navigation a{
-        border: none;
-    }
+  header {
+    grid-template-columns: 40px auto;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .navigation {
+    display: block;
+    border-bottom: 2px solid var(--primary-color);
+  }
+
+  .navigation ul {
+    display: flex;
+  }
+
+  .navigation a {
+    background-color: transparent;
+    color: var(--primary-color);
+    border-bottom: none;
+    padding: 1rem;
+  }
+
+  .navigation li.current a {
+    background-color: transparent;
+    border-bottom: 3px solid var(--primary-color);
+  }
+
+  .navigation a:hover {
+    background-color: var(--muted-bg);
+  }
+
+  /* About Me + Student Photo side by side, Courses full width below */
+  main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+  }
+
+  h1 {
+    grid-column: 1 / -1;
+  }
+
+  .about-card {
+    grid-column: 1;
+    margin-bottom: 0;
+  }
+
+  .photo-card {
+    grid-column: 2;
+    margin-bottom: 0;
+  }
+
+  .courses-card {
+    grid-column: 1 / -1;
+  }
+
+  .course-filter ul {
+    display: flex;
+  }
+
+  .course-list {
+    display: flex;
+  }
+
+  .course-item {
+    flex: 1;
+    border-top: none;
+    border-left: 1px solid var(--border-color);
+  }
+
+  .course-item:first-child {
+    border-left: none;
+  }
+
+  .course-item:nth-child(even) {
+    background-color: var(--muted-bg);
+  }
+
+  footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .social-icons {
+    margin-bottom: 0;
+  }
 }

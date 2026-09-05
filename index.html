@@ -1,43 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Eli Avila">
-    <meta name="description" content="Eli Avila's personal website">
-    <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/base.css">
-    <link rel="stylesheet" href="styles/larger.css">
-    <title>Eli Avila</title>
-  </head>
-  <body>
-    <header>
-      <img src="images/skate.svg" alt="site logo" width="1254.000000pt" height="1254.000000pt">
-      <span>Eli's Site</span>
-      <button id="ham-btn" class="hamburger"></button>
-    </header>
-    <nav id="nav-bar" class="navigation">
-  <ul>
-    <li><a href="#">Chamber Assignment</a></li>
-    <li class="current"><a href="#">Home</a></li>
-    <li><a href="#">Final Project</a></li>
-  </ul>
-</nav>
-    <main>
-      <h1>Home</h1>
-    </main>
-    <footer>
-      <div class="social">
-        <a href="https://www.facebook.com/?locale=es_LA" target="_blank"><img src="images/facebook-i.svg" alt="Facebook" width="16" height="16"></a>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Eli Avila">
+  <meta name="description" content="Eli Avila's personal website, showcasing my work and projects">
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/larger.css">
+  <title>Eli Avila</title>
+  <script src="scripts/navigation.js" defer></script>
+</head>
+<body>
+  <header>
+    <img src="images/skate.svg" alt="site logo" width="40" height="40">
+    <span>Eli's Site</span>
+    <button id="ham-btn" class="hamburger" aria-label="Toggle navigation" aria-controls="nav-bar" aria-expanded="false"></button>
+  </header>
+
+  <nav id="nav-bar" class="navigation">
+    <ul>
+      <li class="current"><a href="#">Home</a></li>
+      <li><a href="#">Chamber Project</a></li>
+      <li><a href="#">Final Project</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h1>Home</h1>
+
+    <section class="about-card">
+      <h2>About Me</h2>
+      <p>Hi! My name is Eli Avila, I am a student at BYU-Idaho. I am currently studying Web Development and Design. I have a passion for creating websites and learning new technologies. In my free time, I enjoy skateboarding, playing video games, and spending time with my friends and family.</p>
+    </section>
+
+    <section class="photo-card">
+      <h2>Student Photo</h2>
+      <img src="images/student-photo.webp" alt="Student Photo">
+    </section>
+
+    <section class="courses-card">
+      <h2>Web Certificate Courses</h2>
+
+      <nav class="course-filter" aria-label="Filter courses">
+        <ul>
+          <li><a href="#" data-filter="ALL" class="active">All</a></li>
+          <li><a href="#" data-filter="CSE">CSE</a></li>
+          <li><a href="#" data-filter="WDD">WDD</a></li>
+        </ul>
+      </nav>
+
+      <ul class="course-list">
+        <!-- populated dynamically by scripts/navigation.js -->
+      </ul>
+
+      <p class="credit-total">The total credits for course listed above is <span id="creditTotal">6</span></p>
+    </section>
+  </main>
+
+  <footer>
+      <div class="social-icons">
+      <a href="https://www.facebook.com/?locale=es_LA" target="_blank"><img src="images/facebook-i.svg" alt="Facebook" width="16" height="16"></a>
         <a href="https://www.linkedin.com/in/eli-avila-248577296" target="_blank"><img src="images/linkedin.svg" alt="LinkedIn" width="16" height="16"></a>
         <a href="https://github.com/eavila2504" target="_blank"><img src="images/github.svg" alt="GitHub" width="16" height="16"></a>
         <a href="https://www.instagram.com/the.avibaby/?hl=es" target="_blank"><img src="images/instagram-i.svg" alt="Instagram" width="16" height="16"></a>
-
-        <p>&copy; <span id="currentyear"></span> Eli Avila &mdash; Mexico</p>
-        <p id="lastModified"></p>
+    <p>&copy; <span id="currentyear"></span> Eli Avila &mdash; Mexico</p>
+    <p id="lastModified"></p>
       </div>
-    </footer>
-    <script src="scripts/navigation.js"></script>
-    
+  </footer>
+
 </body>
 </html>

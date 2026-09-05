@@ -1,53 +1,79 @@
 * {
   box-sizing: border-box;
- font-family: 'Josefin Sans', sans-serif;
-  
+  margin: 0;
+  padding: 0;
 }
+
+/********************* Root *********************/
+:root {
+  --primary-color: #0a1f44;      /* navy */
+  --primary-color-dark: #06132c; /* darker navy for nested nav rows */
+  --primary-color-light: #1c3a6e;/* lighter navy for hover states */
+  --white: #ffffff;
+  --background-color: #ffffff;
+  --text-color: #1a1a1a;
+  --muted-bg: #f2f2f2;
+  --border-color: #dddddd;
+  --placeholder-color: #b3b3b3;
+  --font-family: 'Josefin Sans', sans-serif;
+  --font-size: 16px;
+  --line-height: 1.5;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
 /********************* Header *********************/
 
 header {
   display: grid;
   grid-template-columns: 24px auto 44px;
-  padding: 5px 0 5px 10px;
-  align-items: end;
-  border-bottom: solid 1px #ddd;
-  column-gap: 25px;
+  align-items: center;
+  column-gap: 15px;
+  padding: 10px;
+  border-bottom: 2px solid var(--primary-color);
 }
 
 header img {
-  display: block;  
-  width: 220%;
+  display: block;
+  width: 100%;
   height: auto;
-  padding: 1px;
 }
+
 header span {
-    font-size: 1.5rem;
-    color: #000000;
-    padding-bottom: 10px;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--primary-color);
 }
 
 /******************* Hamburger *********************/
-.hamburger
-{
-    background: none;
-    border: none;
-    font-size: 2rem;
-    color: #000000;
-    cursor: pointer;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+.hamburger {
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  line-height: 1;
+  color: var(--primary-color);
+  cursor: pointer;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-.hamburger::before{
-      content: "\2630";
-        font-size: 2rem;
-    }
-.hamburger.show::before{
-      content: "\00D7";
-    }
+
+.hamburger::before {
+  content: "\2630";
+}
+
+.hamburger.show::before {
+  content: "\00D7";
+}
 
 /******************* Navigation Bar *********************/
 
 .navigation {
-  display: none; 
+  display: none;
 }
 
 .navigation.show {
@@ -56,64 +82,156 @@ header span {
 
 .navigation ul {
   list-style-type: none;
-  margin: 0;
-  padding: 0;
 }
 
 .navigation a {
   display: block;
-  padding: .8rem 10px;
-  color: #3d4058;
+  padding: 0.9rem 10px;
+  background-color: var(--primary-color-dark);
+  color: var(--white);
   text-decoration: none;
-  border-bottom: solid 1px #ddd;
+  font-weight: 600;
+  border-bottom: 1px solid var(--primary-color-light);
 }
 
-.navigation.li.current {
-  background-color: #eee ;
-
+.navigation li.current a {
+  background-color: var(--primary-color);
 }
 
 .navigation a:hover {
-  background-color: #570202f1;
-  color: #000000;
+  background-color: var(--primary-color-light);
+}
+
+/******************* Main content *********************/
+
+main {
+  padding: 15px 10px;
 }
 
 h1 {
-  margin-left: 10px;
-  color: #570202f1;
+  margin-bottom: 15px;
+  color: var(--primary-color);
+}
+
+/* Shared card pattern: About Me / Student Photo / Web Certificate Courses */
+.about-card,
+.photo-card,
+.courses-card {
+  margin-bottom: 20px;
+  border: 1px solid var(--border-color);
+}
+
+.about-card h2,
+.photo-card h2,
+.courses-card h2 {
+  background-color: var(--primary-color);
+  color: var(--white);
+  text-align: center;
+  padding: 0.75rem;
+  font-size: 1rem;
+}
+
+.about-card p {
+  background-color: var(--muted-bg);
+  padding: 1rem;
+}
+
+/* Student photo */
+.photo-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  background-color: var(--placeholder-color);
+  padding: 20px;
+}
+
+/* Web Certificate Courses */
+.course-filter ul {
+  display: flex;
+  list-style: none;
+  gap: 8px;
+  padding: 10px;
+  background-color: var(--muted-bg);
+}
+
+.course-filter a {
+  display: block;
+  flex: 1;
+  text-align: center;
+  padding: 0.6rem;
+  background-color: var(--white);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.course-filter a.active,
+.course-filter a:hover {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: var(--white);
+}
+
+.course-list {
+  list-style: none;
+}
+
+.course-item {
+  padding: 0.75rem;
+  text-align: center;
+  background-color: var(--muted-bg);
+  border-top: 1px solid var(--border-color);
+}
+
+.course-item:nth-child(even) {
+  background-color: var(--white);
+}
+
+.credit-total {
+  padding: 0.75rem;
+  text-align: center;
+  font-size: 0.9rem;
 }
 
 /******************* FOOTER *********************/
-  footer 
-{
-  background-color: #eee;
-  padding: 1rem 10px;
+footer {
+  background-color: var(--muted-bg);
+  padding: 1.5rem 10px;
   text-align: center;
 }
 
-.social {
+.social-icons {
   display: flex;
   justify-content: center;
-  column-gap: 8px;
+  gap: 10px;
+  margin-bottom: 10px;
 }
 
-.social a {
+.social-icons a {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 44px;
   height: 44px;
-  border: #ccc solid 1px;
-  border-radius: 22px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
 }
 
-.social img {
-  width: 22px;
-  height: 22px;
-
+.social-icons a:hover {
+  background-color: var(--primary-color-light);
 }
 
-.social a:hover {
-  background-color: #ddd;
+.social-icons img {
+  width: 20px;
+  height: 20px;
+  /* icons are drawn dark by default; invert so they read white on navy */
+  filter: brightness(0) invert(1);
+}
 
+footer p {
+  font-size: 0.85rem;
+  color: var(--text-color);
 }
