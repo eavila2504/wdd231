@@ -3,23 +3,23 @@ const navButton = document.querySelector('#ham-btn');
 const navLinks = document.querySelector('#nav-bar');
 const STORAGE_KEY = 'index:courses';
 document.getElementById("currentyear").textContent = new Date().getFullYear();
- 
+
 //set dates 
- 
+
 document.getElementById("lastModified").textContent =
   `Last Modified: ${document.lastModified}`;
- 
- 
+
+
 //////////////////////toggle the show class off and on ///////////////////////
 navButton.addEventListener('click', () => {
   navButton.classList.toggle('show');
   navLinks.classList.toggle('show');
 });
- 
- 
+
+
 //////////////////////////List of courses//////////////////////////////////////
- 
- 
+
+
 const courses = [
     {
         subject: 'CSE',
@@ -99,21 +99,29 @@ const courses = [
         completed: false
     }
 ]
- 
- 
+
+
 //////////////////////////Render + filter courses//////////////////////////////
- 
+
 const courseList = document.querySelector('.course-list');
 const filterLinks = document.querySelectorAll('.course-filter a');
 const creditTotal = document.getElementById('creditTotal');
- 
+
+if (!courseList || !creditTotal || filterLinks.length === 0) {
+  console.warn(
+    'navigation.js: course list markup not found on this page ' +
+    '(expected <ul class="course-list">, <p id="creditTotal">, and ' +
+    '.course-filter a links). Skipping course rendering.'
+  );
+} else {
+
 function renderCourses(filter) {
   const filtered = filter === 'ALL'
     ? courses
     : courses.filter(course => course.subject === filter);
- 
+
   courseList.innerHTML = '';
- 
+
   filtered.forEach(course => {
     const li = document.createElement('li');
     li.className = 'course-item';
@@ -124,21 +132,21 @@ function renderCourses(filter) {
     }
     courseList.appendChild(li);
   });
- 
+
   const totalCredits = filtered.reduce((sum, course) => sum + course.credits, 0);
   creditTotal.textContent = totalCredits;
 }
- 
+
 filterLinks.forEach(link => {
   link.addEventListener('click', (event) => {
     event.preventDefault();
- 
+
     filterLinks.forEach(l => l.classList.remove('active'));
     link.classList.add('active');
- 
+
     const filter = link.dataset.filter;
     renderCourses(filter);
- 
+
     try {
       localStorage.setItem(STORAGE_KEY, filter);
     } catch (e) {
@@ -146,7 +154,7 @@ filterLinks.forEach(link => {
     }
   });
 });
- 
+
 // Restore the last selected filter on page load, defaulting to ALL
 let savedFilter = 'ALL';
 try {
@@ -154,9 +162,11 @@ try {
 } catch (e) {
   savedFilter = 'ALL';
 }
- 
+
 filterLinks.forEach(link => {
   link.classList.toggle('active', link.dataset.filter === savedFilter);
 });
- 
+
 renderCourses(savedFilter);
+
+} // end guard block
