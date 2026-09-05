@@ -6,13 +6,7 @@
 }
 
 html {
-  
   overflow-x: hidden;
-}
-
-body {
-  overflow-x: hidden;
-  width: 100%;
 }
 
 
@@ -25,26 +19,32 @@ svg {
 
 /********************* Root: color + type tokens *********************/
 :root {
- 
-  --primary-color: #0a1f44;      
-  --primary-color-dark: #06132c; 
-  --primary-color-light: #2a4a82;
-  --accent-color: #e8a33d;      
+  
+  --primary-color: #0a1f44;      /* navy */
+  --primary-color-dark: #06132c; /* darker navy, mobile nav rows */
+  --primary-color-light: #2a4a82;/* lighter navy, hover fill */
+  --accent-color: #e8a33d;       /* amber, reserved for active/hover/focus */
+  --white: #ffffff;
   --background-color: #ffffff;
   --text-color: #1a1a1a;
   --muted-bg: #f2f2f2;
   --border-color: #d9d9d9;
   --placeholder-color: #b3b3b3;
+
+  /* Google Font: Poppins, one family, weight does the hierarchy work */
   --font-family: 'Poppins', 'Segoe UI', sans-serif;
   --font-size: 16px;
   --line-height: 1.6;
 
   --radius: 6px;
   --transition-speed: 0.2s;
-  --page-inset: 16px; 
+  --page-inset: 16px; /* shared left/right inset so header, nav, main, and
+                          footer content all line up on the same edge */
 }
 
 body {
+  overflow-x: hidden;
+  width: 100%;
   font-family: var(--font-family);
   font-weight: 400;
   font-size: var(--font-size);
@@ -75,7 +75,6 @@ header span {
   font-size: 1.3rem;
   font-weight: 600;
   color: var(--primary-color);
-
   overflow-wrap: anywhere;
 }
 
@@ -121,7 +120,6 @@ header span {
   text-decoration: none;
   font-weight: 500;
   border-bottom: 1px solid var(--primary-color-light);
-
   transition: background-color var(--transition-speed) ease;
 }
 
@@ -151,6 +149,7 @@ h1 {
 }
 
 /* Shared card pattern: About Me / Student Photo / Web Certificate*/
+
 .about-card,
 .photo-card,
 .courses-card {
@@ -175,6 +174,7 @@ h1 {
   padding: 1.25rem 1rem;
 }
 
+/* Student photo*/
 
 .photo-card img {
   width: 100%;
@@ -202,7 +202,7 @@ h1 {
   min-width: 70px;
   text-align: center;
   padding: 0.6rem 0.5rem;
-  background-color: var(--background-color);
+  background-color: var(--white);
   border: 1px solid var(--border-color);
   border-radius: var(--radius);
   color: var(--primary-color);
@@ -236,7 +236,7 @@ h1 {
 }
 
 .course-item:nth-child(even) {
-  background-color: var(--background-color);
+  background-color: var(--white);
 }
 
 .credit-total {
