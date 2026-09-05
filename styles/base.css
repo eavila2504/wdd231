@@ -6,9 +6,7 @@
 }
 
 html {
-  /* safety net: nothing on this page should legitimately need to scroll
-     sideways between 320px and 1200px, but this guards against a stray
-     overflow from a future edit */
+  
   overflow-x: hidden;
 }
 
@@ -17,8 +15,7 @@ body {
   width: 100%;
 }
 
-/* Never let an image distort or blow past its box, regardless of
-   viewport width. Specific components override height as needed. */
+
 img,
 svg {
   max-width: 100%;
@@ -28,27 +25,24 @@ svg {
 
 /********************* Root: color + type tokens *********************/
 :root {
-  /* Own color scheme: navy as the dominant brand color, white for space,
-     amber as a single, deliberate accent reserved for interactive/active
-     states so contrast is meaningful rather than decorative. */
-  --primary-color: #0a1f44;      /* navy */
-  --primary-color-dark: #06132c; /* darker navy, mobile nav rows */
-  --primary-color-light: #2a4a82;/* lighter navy, hover fill */
-  --accent-color: #e8a33d;       /* amber, reserved for active/hover/focus */
+ 
+  --primary-color: #0a1f44;      
+  --primary-color-dark: #06132c; 
+  --primary-color-light: #2a4a82;
+  --accent-color: #e8a33d;      
   --white: #ffffff;
   --background-color: #ffffff;
   --text-color: #1a1a1a;
   --muted-bg: #f2f2f2;
   --border-color: #d9d9d9;
   --placeholder-color: #b3b3b3;
-
-  /* Google Font: Poppins, one family, weight does the hierarchy work */
   --font-family: 'Poppins', 'Segoe UI', sans-serif;
   --font-size: 16px;
   --line-height: 1.6;
 
   --radius: 6px;
   --transition-speed: 0.2s;
+  --page-inset: 16px; 
 }
 
 body {
@@ -60,8 +54,7 @@ body {
   background-color: var(--background-color);
 }
 
-/* Consistent, visible keyboard focus everywhere, since color alone
-   (hover) never carries meaning for keyboard/screen-reader users */
+
 a:focus-visible,
 button:focus-visible {
   outline: 3px solid var(--accent-color);
@@ -75,7 +68,7 @@ header {
   grid-template-columns: 40px 1fr 44px;
   align-items: center;
   column-gap: 12px;
-  padding: 12px 16px;
+  padding: 12px var(--page-inset);
   border-bottom: 2px solid var(--primary-color);
 }
 
@@ -83,8 +76,7 @@ header span {
   font-size: 1.3rem;
   font-weight: 600;
   color: var(--primary-color);
-  /* keeps a long site name from ever forcing the header wider than
-     the viewport at 320px */
+
   overflow-wrap: anywhere;
 }
 
@@ -107,10 +99,6 @@ header span {
 }
 
 /******************* Navigation Bar *********************/
-/* Grid/flex layout throughout (never default block flow), so the nav
-   itself already satisfies "not a single-column layout" at every
-   breakpoint: it's a stacked flex column on mobile, a flex row on
-   desktop. */
 
 .navigation {
   display: none;
@@ -128,14 +116,13 @@ header span {
 
 .navigation a {
   display: block;
-  padding: 0.9rem 16px;
+  padding: 0.9rem var(--page-inset);
   background-color: var(--primary-color-dark);
   color: var(--white);
   text-decoration: none;
   font-weight: 500;
   border-bottom: 1px solid var(--primary-color-light);
-  /* color/background only, so hover never changes box size or
-     position: no layout twitch */
+
   transition: background-color var(--transition-speed) ease;
 }
 
@@ -152,9 +139,7 @@ header span {
 /********************* Main content *********************/
 
 main {
-  padding: 20px 16px;
-  /* Flex column with a deliberate gap instead of relying on default
-     margin-collapsing flow between sections */
+  padding: 20px var(--page-inset);
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -166,15 +151,13 @@ h1 {
   font-size: clamp(1.5rem, 4vw + 0.5rem, 2rem);
 }
 
-/* Shared card pattern: About Me / Student Photo / Web Certificate
-   Courses repeat the same header treatment (repetition principle) so
-   the eye reads them as one family of components. */
+/* Shared card pattern: About Me / Student Photo / Web Certificate*/
 .about-card,
 .photo-card,
 .courses-card {
   border: 1px solid var(--border-color);
   border-radius: var(--radius);
-  overflow: hidden; /* clips the header bar to the card's corner radius */
+  overflow: hidden; 
 }
 
 .about-card h2,
@@ -193,9 +176,7 @@ h1 {
   padding: 1.25rem 1rem;
 }
 
-/* Student photo: aspect-ratio + object-fit keeps the image proportional
-   and un-squished at every width, and a max-width keeps it from ever
-   scaling up past its native resolution and pixelating */
+
 .photo-card img {
   width: 100%;
   max-width: 320px;
@@ -274,7 +255,7 @@ h1 {
 /******************* FOOTER *********************/
 footer {
   background-color: var(--muted-bg);
-  padding: 1.5rem 16px;
+  padding: 1.5rem var(--page-inset);
   text-align: center;
 }
 
@@ -305,8 +286,6 @@ footer {
 .social-icons img {
   width: 20px;
   height: 20px;
-  /* icons are single-color dark by default; invert so they read white
-     on navy (and dark navy on the amber hover state below) */
   filter: brightness(0) invert(1);
 }
 

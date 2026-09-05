@@ -1,6 +1,7 @@
-@media only screen and (min-width: 38rem) {
+@media only screen and (min-width: 600px) {
 
   header,
+  .navigation,
   main,
   footer {
     max-width: 1100px;
@@ -16,10 +17,7 @@
   }
 
   /********************* Large-screen horizontal nav *********************/
-  /* Required: flex row, hover effect, wayfinding, and no twitch on
-     hover (the bottom border is always present and 3px thick, just
-     transparent by default — its color changes, never its size, so
-     nothing else on the page moves). */
+ 
 
   .navigation {
     display: block;
@@ -33,7 +31,7 @@
   .navigation a {
     background-color: transparent;
     color: var(--primary-color);
-    padding: 1rem 1.25rem;
+    padding: 1rem var(--page-inset);
     border-bottom: 3px solid transparent;
   }
 
@@ -49,8 +47,7 @@
   }
 
   /********************* Multi-column page layout *********************/
-  /* About Me + Student Photo side by side, Courses full width below —
-     a real grid, not a single stacked column. */
+  
   main {
     display: grid;
     grid-template-columns: 2fr 1fr;
