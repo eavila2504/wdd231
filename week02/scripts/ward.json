@@ -1,0 +1,49 @@
+{
+    "familyName": "Avila",
+    "dateMove": "2000, 01, 15",
+    "nFamilyMembers": 8,
+    "visitedByBishopric": false,
+    "members": [
+        {
+            "name": "David Avila",
+            "gender": "male",
+            "age": 57
+        }, 
+        {
+            "name": "Nicolasa Avila",
+            "gender": "female",
+            "age": 60
+        }, 
+        {
+            "name": "Jasher Avila",
+            "gender": "male",
+            "age": 35
+        }, 
+        {
+            "name": "Kevin Avila",
+            "gender": "male",
+            "age": 35
+        }, 
+        {
+            "name": "Obed Avila",
+            "gender": "male",
+            "age": 31
+        }, 
+        {
+            "name": "David Avila",
+            "gender": "male",
+            "age": 29
+        }, 
+        {
+            "name": "Raquel Avila",
+            "gender": "female",
+            "age": 26
+        }, 
+        {
+            "name": "Eli Avila",
+            "gender": "male",
+            "age": 24
+        }
+        
+    ]
+}
