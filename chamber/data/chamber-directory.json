@@ -1,68 +1,76 @@
 {
-    "company":[
+    "company": [
         {
-            "compname": "",
-            "adresses": "",
-            "phnumber": 86445433130414,
-            "url": "",
-            "imageurl": "",
-            "membershiplvl": 1
+            "compname": "Bpo Centers",
+            "adresses": "Av. Juárez 2713, La Paz, 72160 Heroica",
+            "phnumber": 6643915853,
+            "url": "https://bpocenters.com/",
+            "imageurl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCDQtr0_OEsD62TSw-vx8NgAFW72JGduUhEsF2ZiThIA&s=10",
+            "membershiplvl": 1,
+            "email": " info@bpocenters.com"
         },
         {
-            "compname": "",
-            "adresses": "",
-            "phnumber": 86445433130414,
-            "url": "",
-            "imageurl": "",
-            "membershiplvl": 2
+             "compname": "Hotel Colonial De Puebla",
+             "adresses": "C. 4 Sur 105, Centro histórico de Puebla, 72000 Heroica Puebla de Zaragoza, Pue.",
+             "phnumber": 2222464612,
+             "url": "http://www.colonial.com.mx/",
+             "imageurl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSeAGxtbueeYYYop4ruAGAVMXyFUr1r4fhmhe57rBDBQ&s=10",
+             "membershiplvl": 3,
+             "email": " hotelcolonial@colonial.com.mx"
         },
         {
-            "compname": "",
-            "adresses": "",
-            "phnumber": 86445433130414,
-            "url": "",
-            "imageurl": "",
-            "membershiplvl": 1
+            "compname": "El Patio y las Ranas",
+            "adresses": "Av 2 Pte 105, Centro, 72000 Heroica Puebla de Zaragoza, Pue.",
+            "phnumber": 2222424734,
+            "url": "https://tacoslasranas.com/",
+            "imageurl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8isFtwshY79lQsrSwvsgCefOOr3SQjctQsMgu68E2yQ&s=10",
+            "membershiplvl": 1,
+            "email": "N/A"
         },
         {
-            "compname": "",
-            "adresses": "",
+            "compname": "María Nupcial",
+            "adresses": "Centro Joyero oriente, Avenida 2 Oriente 13A Junto a Hotel Palace, Av 2 Ote 13A-Loc 9, centro, 72000 Heroica Puebla de Zaragoza, Pue.",
             "phnumber": 86445433130414,
-            "url": "",
-            "imageurl": "",
-            "membershiplvl": 3
+            "url": "https://marianupcial.com/",
+            "imageurl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXAoJUgw_6ocOsyxF_NSGjLuYOdJMJpyVtMhB1DKwVAg&s=10",
+            "membershiplvl": 3,
+            "email": "marianupcial@gmail.com"
         },
         {
-            "compname": "",
-            "adresses": "",
-            "phnumber": 86445433130414,
-            "url": "",
-            "imageurl": "",
-            "membershiplvl": 3
+            "compname": "atomics skate shop",
+            "adresses": "Calle 2 Nte 610, Centro histórico de Puebla, 72000 Heroica Puebla de Zaragoza, Pue.",
+            "phnumber": 2222090296,
+            "url": "N/A",
+            "imageurl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfe263UVPJVyGqeHa0tFFx842h2BUa9M5V47mLNaY4RA&s=10",
+            "membershiplvl": 2,
+            "email": "N/A"
         },
         {
-            "compname": "",
-            "adresses": "",
-            "phnumber": 86445433130414,
-            "url": "",
-            "imageurl": "",
-            "membershiplvl": 3
+            "compname": "Talavera La Colonial",
+            "adresses": "Av 6 Ote 11, Centro, 72000 Heroica Puebla de Zaragoza, Pue.",
+            "phnumber": 22225232590,
+            "url": "https://talaveralacolonial.com/catalogo/",
+            "imageurl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdcO5Si8HngbROtl7AeDlS9pHfGqHZG0WLJ6DAKLY6Fw&s",
+            "membershiplvl": 3,
+            "email": "N/A"
         },
         {
-            "compname": "",
-            "adresses": "",
-            "phnumber": 86445433130414,
-            "url": "",
-            "imageurl": "",
-            "membershiplvl": 3
+            "compname": "Volkswagen",
+            "adresses": "Av. San Lorenzo Almecatla 16, Sanctorum, 72710 Sanctorum, Pue.",
+            "phnumber": 2213949445,
+            "url": "https://www.vw.com.mx/es/experiencia/tips/planta-volkswagen-mexico.html",
+            "imageurl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSClB8OD7QFoDdsTXMYpSyd3UGkliup2fSLquslX0JcQ&s=10",
+            "membershiplvl": 2,
+            "email": "contacto@vw.com.mx"
         },
         {
-            "compname": "",
-            "adresses": "",
-            "phnumber": 86445433130414,
-            "url": "",
-            "imageurl": "",
-            "membershiplvl": 3
+            "compname": "Super Cemitas Alex",
+            "adresses": "Av. 4 Pte. 1106-50-51, Centro histórico de Puebla, 72000 Heroica Puebla de Zaragoza, Pue.",
+            "phnumber": 2222460404,
+            "url": "N/A",
+            "imageurl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCcvzKOHZF_lL3m0DCgt-jj-jst5ncl9L34xm7-XDbYQ&s=10",
+            "membershiplvl": 1,
+            "email": "N/A"
         }
     ]
 }
