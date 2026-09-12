@@ -51,7 +51,8 @@ gridBtn.addEventListener('click', () => setView('grid'));
 listBtn.addEventListener('click', () => setView('list'));
 
 // ---------- Fetch and render member businesses ----------
-const dataUrl = 'data/chamber-directory.json';
+// Local copy of the data, so the directory doesn't depend on an external fetch.
+const dataUrl = 'data/members.json';
 const loadStatus = document.getElementById('load-status');
 
 const MEMBERSHIP_LABELS = {
@@ -60,6 +61,7 @@ const MEMBERSHIP_LABELS = {
     3: 'Gold Member'
 };
 
+// Generic building icon shown when a business photo fails to load.
 const FALLBACK_IMAGE =
     'data:image/svg+xml;utf8,' + encodeURIComponent(`
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96">
@@ -71,7 +73,8 @@ const FALLBACK_IMAGE =
         </svg>
     `);
 
-
+// The sample data mixes real 10-digit numbers with malformed longer ones,
+// so this formats what it can and otherwise just groups digits for readability.
 function formatPhone(raw) {
     const digits = String(raw).replace(/\D/g, '');
 
