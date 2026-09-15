@@ -35,8 +35,13 @@ const gridBtn = document.getElementById('grid-btn');
 const listBtn = document.getElementById('list-btn');
 const cardsContainer = document.getElementById('cards');
 
+let currentView = 'grid';
+let businesses = []; // holds the data loaded from members.json
+
 function setView(view) {
+    currentView = view;
     const isGrid = view === 'grid';
+
     cardsContainer.classList.toggle('cards--grid', isGrid);
     cardsContainer.classList.toggle('cards--list', !isGrid);
 
@@ -45,6 +50,8 @@ function setView(view) {
 
     listBtn.classList.toggle('is-active', !isGrid);
     listBtn.setAttribute('aria-pressed', String(!isGrid));
+
+    renderCards(); // rebuild the cards for the newly selected view
 }
 
 gridBtn.addEventListener('click', () => setView('grid'));
@@ -88,7 +95,7 @@ function formatPhone(raw) {
     return digits.replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
 }
 
-function buildCard(business) {
+function buildCard(business, view) {
     const card = document.createElement('article');
     card.className = 'card';
 
@@ -110,18 +117,22 @@ function buildCard(business) {
     const body = document.createElement('div');
     body.className = 'card-body';
 
-    const photo = document.createElement('img');
-    photo.className = 'card-photo';
-    photo.src = business.imageurl && business.imageurl !== 'N/A' ? business.imageurl : FALLBACK_IMAGE;
-    photo.alt = `Logo of ${compname}`;
-    photo.loading = 'lazy';
-    photo.width = 96;
-    photo.height = 96;
-    // Some thumbnail URLs are unreliable (expired Google cache links) — fall back gracefully.
-    photo.addEventListener('error', () => {
-        photo.src = FALLBACK_IMAGE;
-    }, { once: true });
-    body.appendChild(photo);
+    // Only build the photo in Grid view — in List view we skip creating
+    // (and therefore downloading) the image entirely.
+    if (view === 'grid') {
+        const photo = document.createElement('img');
+        photo.className = 'card-photo';
+        photo.src = business.imageurl && business.imageurl !== 'N/A' ? business.imageurl : FALLBACK_IMAGE;
+        photo.alt = `Logo of ${compname}`;
+        photo.loading = 'lazy';
+        photo.width = 96;
+        photo.height = 96;
+        // Some thumbnail URLs are unreliable (expired Google cache links) — fall back gracefully.
+        photo.addEventListener('error', () => {
+            photo.src = FALLBACK_IMAGE;
+        }, { once: true });
+        body.appendChild(photo);
+    }
 
     const details = document.createElement('div');
     details.className = 'card-details';
@@ -175,19 +186,20 @@ async function getChamberData() {
         const response = await fetch(dataUrl);
         if (!response.ok) throw new Error(`Request failed: ${response.status}`);
         const data = await response.json();
-        displayChamber(data.company || []);
+        businesses = data.company || [];
+        renderCards();
+        loadStatus.hidden = true;
     } catch (err) {
         loadStatus.textContent = 'Sorry, member businesses could not be loaded right now.';
         console.error('Chamber directory fetch error:', err);
     }
 }
 
-function displayChamber(businesses) {
+function renderCards() {
     cardsContainer.innerHTML = '';
     businesses.forEach((business) => {
-        cardsContainer.appendChild(buildCard(business));
+        cardsContainer.appendChild(buildCard(business, currentView));
     });
-    loadStatus.hidden = true;
 }
 
 getChamberData();
