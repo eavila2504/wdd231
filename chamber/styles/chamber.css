@@ -283,6 +283,7 @@ html[data-theme="dark"] .card-header h2 { color: var(--color-ink); }
   justify-content: center;
 }
 
+.cards--list .card-photo { display: none; }
 .cards--list .card-body { flex: 1; align-items: center; }
 
 /* ---------------- Footer ---------------- */
