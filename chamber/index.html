@@ -3,31 +3,29 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Directory | Puebla  Chamber of Commerce</title>
-<meta name="description" content="Browse member businesses of the Puebla Chamber of Commerce.">
+<title>Puebla Chamber of Commerce | Home</title>
+<meta name="description" content="Puebla Chamber of Commerce — connecting local businesses, weather, member spotlights, and upcoming events.">
 <meta name="author" content="Eli Avila">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Puebla Chamber of Commerce">
+<meta property="og:description" content="Connecting local businesses in Puebla, Mexico.">
+<meta property="og:image" content="https://eavila2504.github.io/wdd231/chamber/images/og-image.jpg">
+<meta property="og:url" content="https://eavila2504.github.io/wdd231/chamber/index.html">
+<meta property="og:type" content="website">
+
+<!--Favicon-->
+<link rel="icon" href="favicon-i.ico">
 
 <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-
-<!-- styles and scripts -->
-<link rel="stylesheet" href="styles/chamber.css">
-<link rel="stylesheet" href="styles/chamber-larger.css">
-<script src="scripts/chamber.js" defer></script>
-
-<!--Favicon-->
-<link rel="icon" href="favicon-i.ico">
-
-<!--Media tags for Facebook-->
-<meta property="og:title" content="Puebla Chamber of Commerce | Directory">
-<meta property="og:description" content="Browse member businesses of the Puebla Chamber of Commerce.">
-<meta property="og:image" content="https://eavila2504.github.io/wdd231/chamber/images/og-image.jpg">
-<meta property="og:url" content="https://eavila2504.github.io/wdd231/chamber/directory.html">
-<meta property="og:type" content="website"> 
-
+<link rel="stylesheet" href="styles/chamber.css?v=5">
+<link rel="stylesheet" href="styles/chamber-larger.css?v=5">
+<link rel="stylesheet" href="styles/home.css">
+<script type="module" src="scripts/home.js"></script>
 </head>
 <body>
 
@@ -39,8 +37,8 @@
 
     <nav id="primary-nav" class="primary-nav">
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="directory.html" aria-current="page">Directory</a></li>
+            <li><a href="index.html" aria-current="page">Home</a></li>
+            <li><a href="directory.html">Directory</a></li>
             <li><a href="join.html">Join</a></li>
             <li><a href="discover.html">Discover</a></li>
         </ul>
@@ -60,7 +58,70 @@
 </header>
 
 <main>
-   
+
+    <!-- ---------------- Hero ---------------- -->
+    <section class="hero">
+        <img class="hero-image" src="https://cdn.britannica.com/43/188243-050-D79FC4A3/city-Puebla-Mexico.jpg" alt="Illustrated skyline of Puebla at dusk with its cathedral towers and a distant volcano">
+        <div class="hero-scrim">
+            <h1 class="hero-title">Puebla Chamber of Commerce</h1>
+            <p class="hero-subtitle">Connecting local businesses, building community, and growing Puebla together.</p>
+            <a class="hero-cta" href="join.html">Join the Chamber</a>
+        </div>
+    </section>
+
+    
+    <!-- ---------------- Weather ---------------- -->
+    <section class="home-section" aria-labelledby="weather-heading">
+        <h2 id="weather-heading">Puebla Weather</h2>
+        <p class="section-sub">Current conditions and the 3-day outlook</p>
+ 
+        <div class="weather-card">
+            <div class="weather-now">
+                <img id="graphic" class="weather-icon-img" src="" alt="">
+                <div class="weather-now-text">
+                    <p id="town" class="weather-town"></p>
+                    <p id="temperature" class="weather-temp"></p>
+                    <p id="description" class="weather-desc"></p>
+                </div>
+            </div>
+            <ul id="weather-forecast" class="forecast-list" aria-label="3-day forecast"></ul>
+        </div>
+    </section>
+ 
+    <!-- ---------------- Member spotlight ---------------- -->
+    <section class="home-section" aria-labelledby="spotlight-heading">
+        <h2 id="spotlight-heading">Member Spotlight</h2>
+        <p class="section-sub">A few of our Gold and Silver members — refresh the page to see more</p>
+ 
+        <div id="spotlight-cards" class="spotlight-cards" aria-live="polite">
+            <p>Loading featured members…</p>
+        </div>
+    </section>
+ 
+    <!-- ---------------- Current events (placeholder content) ---------------- -->
+    <section class="home-section" aria-labelledby="events-heading">
+        <h2 id="events-heading">Current Events</h2>
+        <p class="section-sub">Upcoming opportunities to connect with fellow members</p>
+ 
+        <ul class="events-list">
+            <li class="event-card">
+                <span class="event-date">Placeholder date</span>
+                <h3>Business Mixer</h3>
+                <p>Placeholder description — an evening of networking with fellow Chamber members.</p>
+            </li>
+            <li class="event-card">
+                <span class="event-date">Placeholder date</span>
+                <h3>Growth Workshop</h3>
+                <p>Placeholder description — a workshop on marketing and growth strategies for small businesses.</p>
+            </li>
+            <li class="event-card">
+                <span class="event-date">Placeholder date</span>
+                <h3>Annual Gala</h3>
+                <p>Placeholder description — celebrating the Chamber's members and their achievements this year.</p>
+            </li>
+        </ul>
+    </section>
+ 
 </main>
 
 <footer class="site-footer">
@@ -75,9 +136,9 @@
     </div>
 
     <div class="footer-col footer-social">
-        <a href="https://www.facebook.com" target="_blank"><img src="images/facebook-ch.svg" alt="Facebook svg icon" width="16" height="16"></a>
-        <a href="https://linkedin.com/" target="_blank"><img src="images/linkedin-ch.svg" alt="GitHub svg icon" width="16" height="16"></a>
-        <a href="https://www.instagram.com/" target="_blank"><img src="images/instagram-ch.svg" alt="Instagram svg icon" width="16" height="16"></a>
+        <a href="https://www.facebook.com" target="_blank"><img src="images/facebook-i.svg" alt="Facebook svg icon" width="16" height="16"></a>
+        <a href="https://linkedin.com/" target="_blank"><img src="images/linkedin.svg" alt="GitHub svg icon" width="16" height="16"></a>
+        <a href="https://www.instagram.com/" target="_blank"><img src="images/instagram-i.svg" alt="Instagram svg icon" width="16" height="16"></a>
     </div>
 
     <div class="footer-col footer-meta">

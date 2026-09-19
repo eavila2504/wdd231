@@ -14,6 +14,7 @@ html, body { margin: 0; padding: 0; }
   --color-on-navy: #F6F2E8;   
   --color-gold: #B98A2E;
   --color-gold-soft: #E4C77E;
+  --color-gold-text: #8A6A22;  /* darker, AA-safe gold for small bold text on light backgrounds */
   --color-border: #D8CFB8;
   --color-focus: #B98A2E;
  
@@ -37,6 +38,7 @@ html[data-theme="dark"] {
   --color-indigo-deep: #EFEAE0;
   --color-gold: #E4C77E;
   --color-gold-soft: #B98A2E;
+  --color-gold-text: #E4C77E;  /* already AA-safe against dark surfaces */
   --color-border: #333E5C;
   --color-focus: #E4C77E;
   color-scheme: dark;
@@ -261,7 +263,7 @@ html[data-theme="dark"] .card-header h2 { color: var(--color-ink); }
 .card-details p:last-child { margin-bottom: 0; }
  
 .card-details strong {
-  color: var(--color-gold);
+  color: var(--color-gold-text);
   font-weight: 700;
 }
  
