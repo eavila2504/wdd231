@@ -31,13 +31,13 @@
   font-family: var(--font-display);
   font-weight: 700;
   font-size: clamp(1.8rem, 4vw, 3rem);
-  color: #e7e7e7;
+  color: #302f2f;
   margin: 0 0 0.5rem;
   text-shadow: 0 2px 10px rgba(0,0,0,0.4);
 }
 
 .hero-subtitle {
-  color: #ffdc96;
+  color: #d1c8b6;
   font-size: clamp(1rem, 2vw, 1.2rem);
   margin: 0 0 1.5rem;
   max-width: 42rem;
