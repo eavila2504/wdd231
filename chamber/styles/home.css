@@ -31,13 +31,13 @@
   font-family: var(--font-display);
   font-weight: 700;
   font-size: clamp(1.8rem, 4vw, 3rem);
-  color: #F6F2E8;
+  color: #e7e7e7;
   margin: 0 0 0.5rem;
   text-shadow: 0 2px 10px rgba(0,0,0,0.4);
 }
 
 .hero-subtitle {
-  color: #E9E4D6;
+  color: #ffdc96;
   font-size: clamp(1rem, 2vw, 1.2rem);
   margin: 0 0 1.5rem;
   max-width: 42rem;
@@ -60,7 +60,7 @@
 .hero-cta:focus-visible {
   background: transparent;
   color: #F6F2E8;
-  border-color: #F6F2E8;
+  border-color: #555554;
 }
 
 /* ---------------- Shared section wrapper ---------------- */
