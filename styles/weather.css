@@ -1,0 +1,23 @@
+.card { 
+    border: 1px solid #5d6f67;
+    background-color: #f6f0da;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.card h2 {
+    color: #3a5250;
+    margin: .3rem 0;
+}
+
+.card #description {
+    text-transform: capitalize;
+    color: #3a5250;
+    margin: .3rem 0;
+}
+
+.card #temperature {
+    font-size: 2rem;
+    color: #537279;
+    margin: .3rem 0;
+}
