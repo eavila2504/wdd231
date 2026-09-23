@@ -106,6 +106,7 @@ const courses = [
 const courseList = document.querySelector('.course-list');
 const filterLinks = document.querySelectorAll('.course-filter a');
 const creditTotal = document.getElementById('creditTotal');
+const courseDetails = document.querySelector('#course-details');
 
 if (!courseList || !creditTotal || filterLinks.length === 0) {
   console.warn(
@@ -115,6 +116,38 @@ if (!courseList || !creditTotal || filterLinks.length === 0) {
   );
 } else {
 
+function displayCourseDetails(course) {
+  if (!courseDetails) {
+    console.warn('navigation.js: <dialog id="course-details"> not found on this page.');
+    return;
+  }
+
+  courseDetails.innerHTML = `
+    <button id="closeModal" class="modal-close" aria-label="Close course details">&times;</button>
+    <h2>${course.subject} ${course.number}</h2>
+    <h3>${course.title}</h3>
+    <p><strong>Credits:</strong> ${course.credits}</p>
+    <p><strong>Certificate:</strong> ${course.certificate}</p>
+    <p>${course.description}</p>
+    <p><strong>Technologies:</strong> ${course.technology.join(', ')}</p>
+  `;
+
+  courseDetails.showModal();
+
+ 
+  courseDetails.querySelector('#closeModal').addEventListener('click', () => {
+    courseDetails.close();
+  });
+}
+
+if (courseDetails) {
+  courseDetails.addEventListener('click', (event) => {
+    if (event.target === courseDetails) {
+      courseDetails.close();
+    }
+  });
+}
+
 function renderCourses(filter) {
   const filtered = filter === 'ALL'
     ? courses
@@ -123,14 +156,27 @@ function renderCourses(filter) {
   courseList.innerHTML = '';
 
   filtered.forEach(course => {
-    const li = document.createElement('li');
-    li.className = 'course-item';
-    li.dataset.category = course.subject;
-    li.textContent = `${course.subject} ${course.number}`;
+    const courseItem = document.createElement('li');
+    courseItem.className = 'course-item';
+    courseItem.dataset.category = course.subject;
+    courseItem.textContent = `${course.subject} ${course.number}`;
     if (course.completed) {
-      li.classList.add('completed');
+      courseItem.classList.add('completed');
     }
-    courseList.appendChild(li);
+
+    courseItem.tabIndex = 0;
+    courseItem.setAttribute('role', 'button');
+    courseItem.setAttribute('aria-label', `View details for ${course.subject} ${course.number}`);
+
+    courseItem.addEventListener('click', () => displayCourseDetails(course));
+    courseItem.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        displayCourseDetails(course);
+      }
+    });
+
+    courseList.appendChild(courseItem);
   });
 
   const totalCredits = filtered.reduce((sum, course) => sum + course.credits, 0);
@@ -149,13 +195,11 @@ filterLinks.forEach(link => {
 
     try {
       localStorage.setItem(STORAGE_KEY, filter);
-    } catch (e) {
-      // localStorage unavailable (e.g. private browsing) - safe to ignore
-    }
+    } catch (e) {    }
   });
 });
 
-// Restore the last selected filter on page load, defaulting to ALL
+
 let savedFilter = 'ALL';
 try {
   savedFilter = localStorage.getItem(STORAGE_KEY) || 'ALL';
