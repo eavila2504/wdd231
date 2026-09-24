@@ -1,0 +1,31 @@
+.loader-t {
+    margin: 2rem;
+    width: 50px;
+    height: 50px;
+    border: 5px solid transparent;
+    border-color: #999 transparent #999 transparent;
+    border-radius: 50%;
+    transition: transform 1.5s linear;
+    box-shadow: 0 0 1rem rgb(0 0 255 / 40%);
+    position: relative;
+}
+
+.loader-t::after { 
+    content: '🌌';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 1.5s ease-in-out;
+    font-size: 1rem;
+}
+
+.loader-t:hover {
+    transform: rotate(360deg); 
+}
+
+.loader-t:hover::after {
+    transform: translate(-50%, -50%) scale(1.5);
+}
+
+
