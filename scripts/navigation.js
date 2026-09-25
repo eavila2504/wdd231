@@ -164,7 +164,7 @@ function renderCourses(filter) {
       courseItem.classList.add('completed');
     }
 
---    courseItem.tabIndex = 0;
+    courseItem.tabIndex = 0;
     courseItem.setAttribute('role', 'button');
     courseItem.setAttribute('aria-label', `View details for ${course.subject} ${course.number}`);
 

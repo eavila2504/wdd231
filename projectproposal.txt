@@ -1,7 +1,7 @@
-1. PROJECT SUBJECT: skin care and the nest products to care your skin
+1. PROJECT SUBJECT: skin care and the best products to care your skin
 
 2. PROJECT DESCRIPTION: home page will provide a little description for why is important to care your skin and easies steps that 
-that you can follow in other words hpow to start, and producst will contain a list with at least 10 products that you can buy on the super market and brief description for that, contac us page will provide some form that you can schedule some appt
+that you can follow in other words how to start, and products will contain a list with at least 10 products that you can buy on the super market and brief description for that, contac us page will provide some form that you can schedule some appt
 with hipotetic doctor, the user need to entry their details as a first and last name, email phone, and brief feedback
 
 3. PROJECT REASON AND PURPOSE: help to the people to know that take care with your skin health is really easy and in the future help to my
