@@ -1,29 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Form to get new member info for the chamber of comerce puebla ">
-  <meta name="author" content="Paul Cheney">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Puebla Chamber of Commerce | Thank You</title>
+<meta name="description" content="Thank you for applying to the Puebla Chamber of Commerce.">
+<meta name="author" content="Eli Avila">
 
-  <link rel="stylesheet" href="styles/small.css">
-  <link rel="stylesheet" href="styles/large.css">
+<!-- Favicon -->
+<link rel="icon" href="images/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="images/site-icon.svg">
+<link rel="apple-touch-icon" href="images/site-icon.svg">
 
-  <title>New Member Info.</title>
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles/chamber.css?v=5">
+<link rel="stylesheet" href="styles/chamber-larger.css?v=5">
+<link rel="stylesheet" href="styles/thankyou.css">
+<script type="module" src="scripts/thankyou.js"></script>
 </head>
-
 <body>
 
-  <main>
-    <h1>New Member Details</h1>
+<header class="site-header">
+    <div class="brand">
+        <img src="images/site-icon.svg" alt="site icon looks like a liahona" width="40" height="40">
+        <span class="brand-name">Puebla Chamber<br class="brand-break"> of Commerce</span>
+    </div>
 
-    <div id="results"></div>
+    <nav id="primary-nav" class="primary-nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li><a href="join.html">Join</a></li>
+            <li><a href="discover.html">Discover</a></li>
+        </ul>
+    </nav>
 
-  </main>
+    <div class="header-controls">
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-pressed="false" aria-label="Switch to dark mode" title="Switch to dark mode">
+            <svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true">
+                <circle cx="11" cy="11" r="9" fill="none" stroke="currentColor" stroke-width="1.6"/>
+                <path d="M11 2a9 9 0 0 0 0 18Z" fill="currentColor"/>
+            </svg>
+        </button>
+        <button type="button" id="nav-toggle" class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</header>
 
+<main>
+    <h1>Thank You!</h1>
+    <p class="thankyou-intro">We've received your application to join the Puebla Chamber of Commerce. Here's what you submitted:</p>
 
+    <dl id="results" class="results">
+        <div class="results-row"><dt>First Name</dt><dd id="out-first"></dd></div>
+        <div class="results-row"><dt>Last Name</dt><dd id="out-last"></dd></div>
+        <div class="results-row"><dt>Email</dt><dd id="out-email"></dd></div>
+        <div class="results-row"><dt>Mobile Phone</dt><dd id="out-phone"></dd></div>
+        <div class="results-row"><dt>Business/Organization Name</dt><dd id="out-orgname"></dd></div>
+        <div class="results-row"><dt>Submitted On</dt><dd id="out-timestamp"></dd></div>
+    </dl>
 
-  <script src="js/scritpts.js"></script>
+    <a class="back-home" href="index.html">Back to Home</a>
+</main>
+
+<footer class="site-footer">
+    <div class="footer-col footer-contact">
+        <p class="footer-org">Puebla Chamber Commerce</p>
+        <address>
+            10 poniente 105<br>
+            Puebla, Mexico 74300<br>
+            <a href="mailto:info@puebleando.org">info@puebleado.org</a><br>
+            <a href="tel:+2235552300">(223) 555-2300</a>
+        </address>
+    </div>
+
+    <div class="footer-col footer-social">
+        <a href="https://www.facebook.com" target="_blank"><img src="images/facebook-ch.svg" alt="Facebook svg icon" width="16" height="16"></a>
+        <a href="https://linkedin.com/" target="_blank"><img src="images/linkedin-ch.svg" alt="GitHub svg icon" width="16" height="16"></a>
+        <a href="https://www.instagram.com/" target="_blank"><img src="images/instagram-ch.svg" alt="Instagram svg icon" width="16" height="16"></a>
+    </div>
+
+    <div class="footer-col footer-meta">
+        <p>WDD231 Class Project</p>
+        <p>Eli Avila</p>
+        <p>&copy; <span id="currentyear"></span> Puebla Chamber of Commerce</p>
+        <p id="lastModified"></p>
+    </div>
+</footer>
+
 </body>
 </html>
