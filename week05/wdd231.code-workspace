@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../../../../Downloads/startHere/startHere"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "startHere"
+	}
+}
