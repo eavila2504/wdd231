@@ -1,0 +1,103 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --cream: #F5EBDD;
+    --pearl: #F4EEF3;
+    --light-purple: #D67EC9;
+    --title: 'Merriweather', serif;
+    --note: 'Open Sans', sans-serif;
+}
+
+body {
+    font-family: var(--note);
+    color: var(--text);
+    background-color: var(--cream);
+    line-height: 1.7;
+}
+
+header,
+footer {
+    background-color: var(--pearl);
+    padding: 1.25rem 1rem;
+    text-align: center;
+}
+
+header {
+    border-bottom: 3px solid var(--light-purple);
+}
+
+.brand {
+    font-family: var(--title);
+    font-weight: 300;
+    font-size: 1.5rem;
+    letter-spacing: 0.04em;
+}
+
+footer {
+    border-top: 1px solid var(--light-purple);
+    font-size: 0.9rem;
+}
+
+main {
+    max-width: 46rem;
+    margin: 0 auto;
+    padding: 2rem 1rem 3rem;
+}
+
+h1 {
+    font-family: var(--title);
+    font-weight: 300;
+    font-size: 2.25rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+h2 {
+    font-family: var(--title);
+    font-weight: 400;
+    font-size: 1.35rem;
+    padding-left: 0.75rem;
+    border-left: 4px solid var(--light-purple);
+    margin-bottom: 0.75rem;
+}
+
+section {
+    background-color: var(--pearl);
+    border-radius: 0.5rem;
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 1.25rem;
+}
+
+p + p {
+    margin-top: 0.6rem;
+}
+
+.sample-title {
+    font-family: var(--title);
+    font-size: 1.15rem;
+}
+
+.sample-note {
+    font-family: var(--note);
+}
+
+figure {
+    margin-top: 1rem;
+}
+
+figure img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.4rem;
+}
+
+figcaption {
+    font-size: 0.85rem;
+    text-align: center;
+    margin-top: 0.4rem;
+}
