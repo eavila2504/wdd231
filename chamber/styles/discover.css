@@ -1,0 +1,164 @@
+main h1 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 2rem;
+  margin: 0 0 0.4rem;
+  color: var(--color-indigo-deep);
+}
+html[data-theme="dark"] main h1 { color: var(--color-ink); }
+
+.discover-intro {
+  color: var(--color-ink-soft);
+  max-width: 40rem;
+  margin: 0 0 1.5rem;
+}
+
+/* ---------------- Visit message banner ---------------- */
+
+.visit-message {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  background: var(--color-surface-raised);
+  border: 1px solid var(--color-gold-soft);
+  border-radius: var(--radius-m);
+  padding: 0.85rem 1.25rem;
+  margin: 0 0 2rem;
+  color: var(--color-ink);
+}
+
+.visit-message[hidden] { display: none; }
+
+.visit-message-close {
+  background: transparent;
+  border: none;
+  font-size: 1.1rem;
+  line-height: 1;
+  cursor: pointer;
+  color: var(--color-ink-soft);
+  padding: 0.2rem 0.5rem;
+  flex-shrink: 0;
+}
+.visit-message-close:hover { color: var(--color-gold-text); }
+
+/* ---------------- Card grid: named areas, mosaic layout ---------------- */
+
+.discover-grid {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "a"
+    "b"
+    "c"
+    "d"
+    "e"
+    "f"
+    "g"
+    "h";
+}
+
+.item-0 { grid-area: a; }
+.item-1 { grid-area: b; }
+.item-2 { grid-area: c; }
+.item-3 { grid-area: d; }
+.item-4 { grid-area: e; }
+.item-5 { grid-area: f; }
+.item-6 { grid-area: g; }
+.item-7 { grid-area: h; }
+
+/* Medium screens: 641px–1024px — two columns, with full-width "feature" rows */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .discover-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "a a"
+      "b c"
+      "d e"
+      "f f"
+      "g h";
+  }
+}
+
+/* Large screens: 1025px and up — four-column mosaic with a featured card */
+@media (min-width: 1025px) {
+  .discover-grid {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+      "a a b c"
+      "a a d e"
+      "f g h h";
+  }
+}
+
+/* ---------------- Card ---------------- */
+
+.discover-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-m);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.discover-card h2 {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0;
+  padding: 0.85rem 1rem 0.5rem;
+  color: var(--color-indigo-deep);
+}
+html[data-theme="dark"] .discover-card h2 { color: var(--color-ink); }
+
+.discover-card figure {
+  margin: 0;
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  background: var(--color-surface-raised);
+}
+
+.discover-card figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.discover-card address {
+  font-style: normal;
+  font-size: 0.8rem;
+  color: var(--color-ink-soft);
+  padding: 0.6rem 1rem 0;
+}
+
+.discover-card p {
+  font-size: 0.9rem;
+  color: var(--color-ink);
+  padding: 0.5rem 1rem 0;
+  margin: 0;
+  flex: 1;
+}
+
+.discover-card .learn-more {
+  margin: 0.85rem 1rem 1rem;
+  align-self: flex-start;
+  background: transparent;
+  border: 1.5px solid var(--color-navy);
+  color: var(--color-navy);
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 0.45rem 1rem;
+  border-radius: var(--radius-s);
+  cursor: pointer;
+}
+html[data-theme="dark"] .discover-card .learn-more { border-color: var(--color-gold-soft); color: var(--color-gold-soft); }
+.discover-card .learn-more:hover { background: var(--color-navy); color: var(--color-on-navy); }
+html[data-theme="dark"] .discover-card .learn-more:hover { background: var(--color-gold-soft); color: var(--color-indigo-deep); }
+
+/* Featured card (area "a" on large screens) gets a slightly bigger title */
+@media (min-width: 1025px) {
+  .item-0 h2 { font-size: 1.35rem; }
+}

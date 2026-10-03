@@ -25,6 +25,7 @@
 <link rel="stylesheet" href="styles/chamber.css?v=5">
 <link rel="stylesheet" href="styles/chamber-larger.css?v=5">
 <link rel="stylesheet" href="styles/home.css">
+<link rel="stylesheet" href="styles/discover.css">
 <script type="module" src="scripts/discover.mjs"></script>
 </head>
 <body>
@@ -58,7 +59,15 @@
 </header>
 
 <main>
-    
+    <h1>Discover Puebla</h1>
+    <p class="discover-intro">Eight places worth visiting while you're in town — part of what makes Puebla a great place to do business.</p>
+ 
+    <div id="visit-message" class="visit-message" role="status" hidden>
+        <span id="visit-message-text"></span>
+        <button type="button" id="visit-message-close" class="visit-message-close" aria-label="Dismiss">✕</button>
+    </div>
+ 
+    <div id="discover-grid" class="discover-grid"></div>
 </main>
 
 <footer class="site-footer">
