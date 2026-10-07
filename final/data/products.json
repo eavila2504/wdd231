@@ -1,0 +1,420 @@
+{
+    "products": [
+        {
+            "category": "Cleanser",
+            "pName": "CeraVe Hydrating Cream-to-Foam Cleanser",
+            "pDescription": "Gently cleanses and helps preserve the skin barrier.",
+            "skinType": "Normal to dry skin",
+            "pPrice": "$250",
+            "pImage": "https://www.cerave.mx/-/media/project/loreal/brand-sites/cerave/americas/mx/products/packshots-without-eczema/hydrating-cleanser-front-lg.jpg?rev=-1?w=500&hash=9F188BE02ACD3D4E8A45713D2ABBA3FA"
+        },
+        {
+            "category": "Cleanser",
+            "pName": "Cetaphil Gentle Facial Cleanser",
+            "pDescription": "Gently cleanses and helps maintain hydration.",
+            "skinType": "Normal/sensitive skin",
+            "pPrice": "$250",
+            "pImage": "https://www.cerave.mx/cuidado-de-la-piel/limpiadores/limpiador-facial-hidratante?utm_source=chatgpt.com"
+        },
+        {
+            "category": "Cleanser",
+            "pName": "Bioderma Hydrabio Gel Moussant",
+            "pDescription": "Cleansing gel that cleanses and helps maintain hydration.",
+            "skinType": "Normal to dehydrated skin",
+            "pPrice": "$500",
+            "pImage": "https://share.google/Cw8Xt8RiW3nIRoLW4"
+        },
+        {
+            "category": "Moisturizer",
+            "pName": "CeraVe PM Facial Moisturizing Lotion",
+            "pDescription": "Moisturizing lotion with ceramides, hyaluronic acid, and niacinamide.",
+            "skinType": "All skin types/normal skin",
+            "pPrice": "$350",
+            "pImage": "https://production-media.fahorro.com/media/catalog/product/3/3/3337875597449_.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=465&width=372&canvas=372:465"
+        },
+        {
+            "category": "Moisturizer",
+            "pName": "ISDIN Hyaluronic Moisture Normal to Dry",
+            "pDescription": "Lightweight cream with hyaluronic acid and antioxidants.",
+            "skinType": "Normal to dry skin",
+            "pPrice": "$966",
+            "pImage": "https://share.google/Wc6ORcwuLYNKvMam4"
+        },
+        {
+            "category": "Moisturizer",
+            "pName": "Vichy Minéral 89",
+            "pDescription": "Lightweight moisturizer that helps boost hydration.",
+            "skinType": "All skin types/normal skin",
+            "pPrice": "$600",
+            "pImage": "https://production-media.fahorro.com/media/catalog/product/3/3/3337875543248_14.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=465&width=372&canvas=372:465"
+        },
+        {
+            "category": "Serum",
+            "pName": "Vichy Minéral 89 Booster",
+            "pDescription": "Hydrating serum that helps keep the skin hydrated.",
+            "skinType": "All skin types",
+            "pPrice": "$650",
+            "pImage": "https://www.vichy.com.mx/-/media/project/loreal/brand-sites/vchy/americas/latam/products/skincare/mineral-89-potenciador/images/50ml.png?rev=76c4ce498dd04444b032fb713532fd1d&cx=0.51&cy=0.53&cw=600&ch=600&hash=CA31487D6EFF0D5BC6B9CBD5BADA2F70"
+        },
+        {
+            "category": "Serum",
+            "pName": "Bioderma Hydrabio Serum",
+            "pDescription": "Serum for intense hydration of dehydrated skin.",
+            "skinType": "Normal to dehydrated skin",
+            "pPrice": "$550",
+            "pImage": "https://back-ac-prod.bioderma.com/media/catalog/product/cache/b443460c314aa18d2c50e93a48ddeb50/h/y/hyalu.jpg"
+        },
+        {
+            "category": "Serum",
+            "pName": "La Roche-Posay Hyalu B5 Serum",
+            "pDescription": "Serum with hyaluronic acid to hydrate and improve the appearance of fine lines.",
+            "skinType": "Normal to dry skin",
+            "pPrice": "$700",
+            "pImage": "https://www.laroche-posay.com.mx/-/media/project/loreal/brand-sites/lrp/america/latam/products/hyalu-b5/hyalu-b5-suractivated-serum/serum/1.png?cx=0&amp;ch=600&amp;cy=0&amp;cw=600&hash=74B9790EEBE80ABBC911F2B1A6EE6549"
+        },
+        {
+            "category": "Sunscreen",
+            "pName": "ISDIN Fusion Water SPF 50",
+            "pDescription": "Ultra-lightweight facial sunscreen with fast absorption.",
+            "skinType": "All skin types/normal skin",
+            "pPrice": "$500",
+            "pImage": "https://www.isdin.com/mx/_next/image?url=https%3A%2F%2Fdam.isdin.com%2Ftransform%2F1_1%2F22d144c9-00e9-40e6-b4f9-f0d4d1c00a6e%2FMX_1349_TH_FPFUSIONWATERMAGICSPF50ML_MAIN_IMAGE_TEXTURE_0&w=1080&q=75"
+        },
+        {
+            "category": "Sunscreen",
+            "pName": "La Roche-Posay Anthelios UVMune 400 SPF 50+",
+            "pDescription": "Very high UVA/UVB protection for daily use.",
+            "skinType": "All skin types",
+            "pPrice": "$500",
+            "pImage": "https://www.laroche-posay.com.mx/-/media/project/loreal/brand-sites/lrp/america/latam/products/anthelios/anthelios/anthelios-uvmune-400-anti-dark-spots-fluid-spf50plus/fluido-antimanchas-image.png?cx=0.35&amp;ch=600&amp;cy=0.13&amp;cw=600&hash=B62DE832ED107642DA151C03468E5DE0"
+        },
+        {
+            "category": "Sunscreen",
+            "pName": "Eucerin Sun Facial Hydro Fluid SPF 50+",
+            "pDescription": "High protection with a lightweight texture and invisible finish.",
+            "skinType": "Normal to combination skin",
+            "pPrice": "$450",
+            "pImage": "https://images-1.eucerin.com/~/media/eucerin%20relaunch%20media/media-center-items/4/3/8/b0192fd0e52b4609a10ed4156fcf7566-screen.jpg?mw=639&hash=308d01ed448c964b2b1e991116be8f32"
+        },
+        {
+            "category": "Cleanser",
+            "pName": "CeraVe Hydrating Cleanser",
+            "pDescription": "Cleanses without drying and helps maintain the skin barrier.",
+            "skinType": "Dry to very dry skin",
+            "pPrice": "$250",
+            "pImage": "https://www.cerave.mx/-/media/project/loreal/brand-sites/cerave/americas/mx/products/packshots-without-eczema/hydrating-cleanser-front-lg.jpg?rev=-1?w=500&hash=9F188BE02ACD3D4E8A45713D2ABBA3FA"
+        },
+        {
+            "category": "Cleanser",
+            "pName": "Cetaphil Gentle Skin Cleanser",
+            "pDescription": "Creamy and gentle cleanser for dry and sensitive skin.",
+            "skinType": "Dry/sensitive skin",
+            "pPrice": "$250",
+            "pImage": "https://www.cerave.mx/-/media/project/loreal/brand-sites/cerave/americas/mx/new_product/limpieza/limpiadora-crema-espuma-hidratante-236ml/3337875743563.jpg?rev=-1?w=500&hash=1F647A66DFFB98E8BE83A65DB2CA26DE"
+        },
+        {
+            "category": "Cleanser",
+            "pName": "La Roche-Posay Toleriane Dermo-Cleanser",
+            "pDescription": "Gently cleanses and helps respect the skin barrier.",
+            "skinType": "Dry/sensitive skin",
+            "pPrice": "$350",
+            "pImage": "https://www.laroche-posay.com.mx/-/media/project/loreal/brand-sites/lrp/america/latam/products/toleriane/dermo-cleanser/la-roche-posay-productpage-sensitive-allergic-toleriane-dermo-cleanser-200ml-3433422406599-front.png?cx=0&amp;ch=600&amp;cy=0&amp;cw=600&hash=F83461CA48DBF5B69DB9B5596E3C02E0"
+        },
+        {
+            "category": "Moisturizer",
+            "pName": "CeraVe Moisturizing Cream",
+            "pDescription": "Cream with ceramides and hyaluronic acid to restore the skin barrier.",
+            "skinType": "Dry to very dry skin",
+            "pPrice": "$250",
+            "pImage": "https://www.cerave.mx/-/media/project/loreal/brand-sites/cerave/americas/mx/products/moisturizing-cream/19oz/crema-hidratante-19oz/crema-hidratante-19oz-one-lg.jpg?rev=-1?w=500&hash=BD62462F55980DFA49082836E1D4C362"
+        },
+        {
+            "category": "Moisturizer",
+            "pName": "Bioderma Atoderm Crème",
+            "pDescription": "Hydrates, nourishes, and helps protect the skin barrier.",
+            "skinType": "Normal to dry skin",
+            "pPrice": "$285",
+            "pImage": "https://back-ac-prod.bioderma.com/media/catalog/product/cache/b443460c314aa18d2c50e93a48ddeb50/4/e/4eda68ff3dc5abaa12ab6dd6ea38fb1849eca09e3542145591c370a98e4506b6-_7b151405_7d__7b_7d__7b28065c_7d.jpg"
+        },
+        {
+            "category": "Moisturizer",
+            "pName": "Vichy Aqualia Thermal Rich Cream",
+            "pDescription": "Rich-textured cream that hydrates and provides comfort.",
+            "skinType": "Dry/dehydrated skin",
+            "pPrice": "$600",
+            "pImage": "https://www.vichyusa.com/dw/image/v2/AANG_PRD/on/demandware.static/-/Sites-acd-vichy-master-catalog/default/dw48bab0fb/product/Vichy-Aqualia-Thermal-Hydrating-Rich-Cream-3337875588225-PDP-1.webp?sw=640&sh=640&sm=cut&sfrm=jpg&q=70"
+        },
+        {
+            "category": "Serum",
+            "pName": "La Roche-Posay Hyalu B5 Serum",
+            "pDescription": "Hydrating serum with hyaluronic acid for skin that feels tight.",
+            "skinType": "Dry skin",
+            "pPrice": "$700",
+            "pImage": "https://www.cremaspremium.com.mx/cdn/shop/files/larocheposay-product-antiaging-hyalub5-serum-30ml-3337875583626-fss-1-front_600x.webp?v=1700151026"
+        },
+        {
+            "category": "Serum",
+            "pName": "Vichy Minéral 89 Booster",
+            "pDescription": "Hydrating serum that helps improve skin comfort.",
+            "skinType": "Dry/dehydrated skin",
+            "pPrice": "$650",
+            "pImage": "https://production-media.fahorro.com/media/catalog/product/3/3/3337875543248_14.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=465&width=372&canvas=372:465"
+        },
+        {
+            "category": "Serum",
+            "pName": "Bioderma Hydrabio Serum",
+            "pDescription": "Concentrated serum for intense hydration.",
+            "skinType": "Dry/dehydrated skin",
+            "pPrice": "$550",
+            "pImage": "https://back-ac-prod.bioderma.com/media/catalog/product/cache/b443460c314aa18d2c50e93a48ddeb50/h/y/hyalu.jpg"
+        },
+        {
+            "category": "Sunscreen",
+            "pName": "La Roche-Posay Anthelios UVMune 400 Hydrating Cream SPF 50+",
+            "pDescription": "Very high protection with a more hydrating formula.",
+            "skinType": "Dry skin",
+            "pPrice": "$500",
+            "pImage": "https://www.laroche-posay.com.mx/-/media/project/loreal/brand-sites/lrp/america/latam/products/anthelios/anthelios-uvmune-hydrating-cream-spf-50-plus-non-perfumed/lrpproductpagesunantheliosuvmune400creamspspf503337875797719frontpng-(1).png"
+        },
+        {
+            "category": "Sunscreen",
+            "pName": "CeraVe Hydrating Mineral Sunscreen SPF 50",
+            "pDescription": "Mineral protection with a hydrating focus.",
+            "skinType": "Dry/sensitive skin",
+            "pPrice": "$450",
+            "pImage": "https://www.cerave.com/-/media/project/loreal/brand-sites/cerave/americas/us/sunscreen/face/50-spf-face/50-spf-face_front.jpg?rev=876337554bf7423bb530d2f754cb9e78&w=900&hash=06DB49BEE812663A2422CDF2F1C722F3"
+        },
+        {
+            "category": "Sunscreen",
+            "pName": "ISDIN Fusion Water SPF 50",
+            "pDescription": "Lightweight sunscreen for daily use.",
+            "skinType": "All skin types",
+            "pPrice": "$500",
+            "pImage": "https://www.isdin.com/mx/_next/image?url=https%3A%2F%2Fdam.isdin.com%2Ftransform%2F1_1%2F22d144c9-00e9-40e6-b4f9-f0d4d1c00a6e%2FMX_1349_TH_FPFUSIONWATERMAGICSPF50ML_MAIN_IMAGE_TEXTURE_0&w=1080&q=75"
+        },
+        {
+            "category": "Cleanser",
+            "pName": "La Roche-Posay Effaclar Purifying Foaming Gel Cleanser",
+            "pDescription": "Cleanses and purifies oily skin without excessively drying it.",
+            "skinType": "Oily/acne-prone skin",
+            "pPrice": "$350",
+            "pImage": "https://www.laroche-posay.com.mx/-/media/project/loreal/brand-sites/lrp/america/latam/products/effaclar/effaclar-cleansing-foaming-gel/la-roche-posay-productpage-acne-effaclar-cleansing-foaming-gel-400ml-3337872411991-zoom1-front.png?cx=0&amp;ch=600&amp;cy=0&amp;cw=600&hash=8BC4880F5B2CC7D3678287A059B1D496"
+        },
+        {
+            "category": "Cleanser",
+            "pName": "Bioderma Sébium Gel Moussant",
+            "pDescription": "Cleanses impurities and excess sebum.",
+            "skinType": "Oily/acne-prone skin",
+            "pPrice": "$350",
+            "pImage": "https://back-ac-prod.bioderma.com/media/catalog/product/cache/b443460c314aa18d2c50e93a48ddeb50/c/a/caa528b638ea71dba4b2ab1f68061aa967ff18d57380bb955eba07a1ba4998e4-_7b157306_7d__7b_7d__7b28666a_7d.jpg"
+        },
+        {
+            "category": "Cleanser",
+            "pName": "CeraVe Foaming Facial Cleanser",
+            "pDescription": "Cleanses oil and impurities while helping preserve the skin barrier.",
+            "skinType": "Normal to oily skin",
+            "pPrice": "$250",
+            "pImage": "https://www.cerave.mx/-/media/project/loreal/brand-sites/cerave/americas/mx/products/packshots-without-eczema/foaming-cleanser-front-lg.jpg?rev=-1?w=500&hash=F03FD135AEA87E0E40E89C732373E7DF"
+        },
+        {
+            "category": "Moisturizer",
+            "pName": "CeraVe Oil Control Gel-Cream",
+            "pDescription": "Hydrates and helps absorb excess sebum with a matte finish.",
+            "skinType": "Combination to oily skin",
+            "pPrice": "$350",
+            "pImage": "https://www.cerave.mx/-/media/project/loreal/brand-sites/cerave/americas/mx/products/gel-crema-hidratante-facil/oil-control-1-lg.jpg?rev=-1?w=500&hash=EF3B84A0506D9BBA31EB14B920DC03B9"
+        },
+        {
+            "category": "Moisturizer",
+            "pName": "Eucerin DermoPure Clinical Mattifying Fluid",
+            "pDescription": "Mattifying fluid that helps control oiliness and shine.",
+            "skinType": "Oily/acne-prone skin",
+            "pPrice": "$450",
+            "pImage": "https://images-1.eucerin.com/~/media/eucerin%20relaunch%20media/media-center-items/8/e/0/b6d4f5e271f243ca8232499c619a4fe8-screen.jpg?mw=639&hash=7b4f9111a158204f4ff27a36104f79c3"
+        },
+        {
+            "category": "Moisturizer",
+            "pName": "La Roche-Posay Effaclar Mat",
+            "pDescription": "Mattifying moisturizer that helps control shine and the appearance of pores.",
+            "skinType": "Combination to oily skin",
+            "pPrice": "$450",
+            "pImage": "https://www.laroche-posay.com.mx/-/media/project/loreal/brand-sites/lrp/america/latam/products/effaclar/effaclar-a-z-gel-cream-new/lrp-effaclar_azcream_pack-front.png?cx=0.47&amp;ch=600&amp;cy=0.55&amp;cw=600&hash=7103E093D2A6FA4050BD01F5E341831A"
+        },
+        {
+            "category": "Serum",
+            "pName": "La Roche-Posay Effaclar Ultra Concentrated Serum",
+            "pDescription": "Treatment with exfoliating acids for imperfections and blemishes.",
+            "skinType": "Oily/acne-prone skin",
+            "pPrice": "$650",
+            "pImage": "https://www.laroche-posay.com.mx/-/media/project/loreal/brand-sites/lrp/america/latam/products/effaclar/effaclar-ultra-concentrated-serum/new-larocheposay-product-effaclar-serum-fss-30ml-1200x1200px.png?cx=0&amp;ch=600&amp;cy=0&amp;cw=600&hash=50FECE9F1BD3F84051BE9AE9AD14ABE5"
+        },
+        {
+            "category": "Serum",
+            "pName": "Eucerin DermoPure Triple Effect Serum",
+            "pDescription": "Helps with imperfections and post-acne marks.",
+            "skinType": "Oily/acne-prone skin",
+            "pPrice": "$600",
+            "pImage": "https://production-media.fahorro.com/media/catalog/product/4/0/4005900873347_1.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=465&width=372&canvas=372:465"
+        },
+        {
+            "category": "Serum",
+            "pName": "Vichy Minéral 89 Probiotic Fractions",
+            "pDescription": "Repairing and hydrating serum that helps improve skin comfort.",
+            "skinType": "Oily/sensitive skin",
+            "pPrice": "$750",
+            "pImage": "https://www.vichy.com.mx/-/media/project/loreal/brand-sites/vchy/americas/latam/products/other-products/all-products-new-variant-images/fracciones-probioticas.png?rev=cc8e806f952b41e4a536e30cf92f5a3e&cx=0.45&cy=0.54&cw=600&ch=600&hash=B698D8489764C0EAC635A13DA6FE9781"
+        },
+        {
+            "category": "Sunscreen",
+            "pName": "Eucerin Sun Face Oil Control SPF 50+",
+            "pDescription": "High facial protection with an oil-control finish.",
+            "skinType": "Oily/acne-prone skin",
+            "pPrice": "$450",
+            "pImage": "https://images-1.eucerin.com/~/media/eucerin%20relaunch%20media/media-center-items/9/e/b/a09deca24097466d8399b7f2c9830e75-screen.jpg?mw=639&hash=9e4630edb73826c61e6c413b08024b8c"
+        },
+        {
+            "category": "Sunscreen",
+            "pName": "La Roche-Posay Anthelios UVMune 400 Oil Control SPF 50+",
+            "pDescription": "Very high protection with shine-control effect.",
+            "skinType": "Combination to oily skin",
+            "pPrice": "$500",
+            "pImage": "https://www.laroche-posay.com.mx/-/media/project/loreal/brand-sites/lrp/america/latam/products/anthelios/anthelios-uvair-spf50-plus/uv-air-product.png?cx=0.47&amp;ch=600&amp;cy=0.64&amp;cw=600&hash=715A6819C8E558440B38F2C8871ACA53"
+        },
+        {
+            "category": "Sunscreen",
+            "pName": "Bioderma Photoderm Dry Touch SPF 50+",
+            "pDescription": "Dry-finish sunscreen for acne-prone/oily skin.",
+            "skinType": "Acne-prone/oily skin",
+            "pPrice": "$500",
+            "pImage": "https://back-ac-prod.bioderma.com/media/catalog/product/cache/b443460c314aa18d2c50e93a48ddeb50/e/f/efb923a23af863943f40624aaed34f92-packshot_photoderm_20xdefense_20invisible_20spf50_2028599.jpg"
+        },
+        {
+            "category": "Cleanser",
+            "pName": "Vichy Normaderm Deep Cleansing Purifying Gel",
+            "pDescription": "Dermatological-grade facial cleanser specifically designed for combination, oily, or acne-prone skin.",
+            "skinType": "Combination to oily skin",
+            "pPrice": "$360",
+            "pImage": "https://www.vichy.com.mx/-/media/project/loreal/brand-sites/vchy/americas/latam/products/cwi-images/normaderm-gel-purificante-limpieza-profunda/normaderm-gel-purificante-limpieza-profunda-packshot.jpg?rev=2f7e96281df5422f99c6ab4e0caf3dd7&cx=0.26&cy=0.59&cw=600&ch=600&hash=C01A2CB1B6D7FBCFB6147B991A9FBE00"
+        },
+        {
+            "category": "Cleanser",
+            "pName": "Bioderma Sébium Gel Moussant",
+            "pDescription": "Cleanses and helps control excess sebum.",
+            "skinType": "Combination to oily skin",
+            "pPrice": "$350",
+            "pImage": "https://back-ac-prod.bioderma.com/media/catalog/product/cache/b443460c314aa18d2c50e93a48ddeb50/c/a/caa528b638ea71dba4b2ab1f68061aa967ff18d57380bb955eba07a1ba4998e4-_7b157306_7d__7b_7d__7b28666a_7d.jpg"
+        },
+        {
+            "category": "Cleanser",
+            "pName": "Cetaphil Daily Facial Cleanser",
+            "pDescription": "Cleanses to remove oil and impurities without excessive drying.",
+            "skinType": "Combination to oily skin",
+            "pPrice": "$250",
+            "pImage": "https://www.cetaphil.com.mx/dw/image/v2/bggn_prd/on/demandware.static/-/Sites-galderma-mx-m-catalog/default/dwb9045831/3499320015530/GEL_LIMPIADOR_PARA_PIEL_GRASA_473_F.png?sw=900&sh=900&sm=fit&q=85"
+        },
+        {
+            "category": "Moisturizer",
+            "pName": "CeraVe Oil Control Gel-Cream",
+            "pDescription": "Lightweight hydration with excess sebum control.",
+            "skinType": "Combination to oily skin",
+            "pPrice": "$350",
+            "pImage": "https://www.cerave.mx/-/media/project/loreal/brand-sites/cerave/americas/mx/products/gel-crema-hidratante-facil/oil-control-1-lg.jpg?rev=-1?w=500&hash=EF3B84A0506D9BBA31EB14B920DC03B9"
+        },
+        {
+            "category": "Moisturizer",
+            "pName": "ISDIN Hyaluronic Moisture Oily & Combination Skin",
+            "pDescription": "Lightweight moisturizing cream adapted for combination and oily skin.",
+            "skinType": "Combination to oily skin",
+            "pPrice": "$966",
+            "pImage": "https://www.isdin.com/mx/_next/image?url=https%3A%2F%2Fdam.isdin.com%2Ftransform%2F1_1%2Fa1d62952-825d-492a-9bb4-2808bbd8eeb6%2FMX_4056_TH_ISDINCEUTICSHMOILY50G_MAIN_IMAGE_TEXTURE_0&w=1080&q=75"
+        },
+        {
+            "category": "Moisturizer",
+            "pName": "Vichy Normaderm Phytosolution Double-Correction",
+            "pDescription": "Moisturizer that helps improve imperfections and control oiliness.",
+            "skinType": "Combination to oily skin",
+            "pPrice": "$500",
+            "pImage": "https://www.vichy.com.mx/-/media/project/loreal/brand-sites/vchy/americas/latam/products/skincare/normaderm-phytosolution/doble-correccion.png?rev=76e6b83d0d2e46a086b0c635c828cc5d&cx=0.5&cy=0.53&cw=600&ch=600&hash=7639A41DDF079EAAE89C71E6FDE92974"
+        },
+        {
+            "category": "Serum",
+            "pName": "La Roche-Posay Effaclar Ultra Concentrated Serum",
+            "pDescription": "Helps treat imperfections, blemishes, and uneven texture.",
+            "skinType": "Combination/oily acne-prone skin",
+            "pPrice": "$650",
+            "pImage": "https://www.laroche-posay.com.mx/-/media/project/loreal/brand-sites/lrp/america/latam/products/effaclar/effaclar-ultra-concentrated-serum/new-larocheposay-product-effaclar-serum-fss-30ml-1200x1200px.png?cx=0&amp;ch=600&amp;cy=0&amp;cw=600&hash=50FECE9F1BD3F84051BE9AE9AD14ABE5"
+        },
+        {
+            "category": "Serum",
+            "pName": "Eucerin DermoPure Triple Effect Serum",
+            "pDescription": "Helps reduce imperfections and post-acne marks.",
+            "skinType": "Combination/oily skin",
+            "pPrice": "$600",
+            "pImage": "https://i5-mx.walmartimages.com/asr/80a2d102-c5f2-4b8c-b031-298f2d4df8a2.06c71007ffc4ce37c1e0e903c281257b.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF"
+        },
+        {
+            "category": "Sunscreen",
+            "pName": "Bioderma Photoderm Aquafluide SPF 50+",
+            "pDescription": "High-protection fluid with a lightweight texture for combination to oily skin.",
+            "skinType": "Combination to oily skin",
+            "pPrice": "$600",
+            "pImage": "https://www.cremaspremium.com.mx/cdn/shop/files/BIODERMAPHOTODERMAQUAFLUIDESPF5040MLArtboard1_800x.jpg?v=1723134325"
+        },
+        {
+            "category": "Cleanser",
+            "pName": "Cetaphil Gentle Skin Cleanser",
+            "pDescription": "Gentle and hydrating cleansing for sensitive skin.",
+            "skinType": "Sensitive/dry skin",
+            "pPrice": "$250",
+            "pImage": "https://www.cetaphil.com.mx/dw/image/v2/bggn_prd/on/demandware.static/-/Sites-galderma-mx-m-catalog/default/dw2b61a200/3499320012850/LOCION%20LIMPIADORA%20PIEL%20SENSIBLE%20473%20F.png?sw=450&sh=450&sm=fit&q=85"
+        },
+        {
+            "category": "Cleanser",
+            "pName": "La Roche-Posay Toleriane Dermo-Cleanser",
+            "pDescription": "Cleanses while respecting the sensitive skin barrier.",
+            "skinType": "Sensitive/reactive skin",
+            "pPrice": "$350",
+            "pImage": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTliodIQxMEyARjHjG5TmLm_Sfe4VFp-wBqflVJu5NnHfHqsvGMI5py5FtZVScrnhwI2ST9pbgp9yW2G93lS95R1kk3DEuHWNiCCaa5kMIye30SGHbgLHCO"
+        },
+        {
+            "category": "Moisturizer",
+            "pName": "La Roche-Posay Toleriane Sensitive Cream",
+            "pDescription": "Daily facial moisturizer for sensitive skin.",
+            "skinType": "Sensitive skin",
+            "pPrice": "$400",
+            "pImage": "https://resources.sears.com.mx/medios-plazavip/fotos/productos_sears1/original/3314261.jpg?scale=550"
+        },
+        {
+            "category": "Moisturizer",
+            "pName": "Bioderma Sensibio Defensive",
+            "pDescription": "Moisturizer designed to help protect and soothe sensitive skin.",
+            "skinType": "Sensitive skin",
+            "pPrice": "$450",
+            "pImage": "https://back-ac-prod.bioderma.com/media/catalog/product/cache/b443460c314aa18d2c50e93a48ddeb50/4/9/49874a2e1262f28132d1917407ba4f66d624d1fc710cc0dad9ddf9757718df37-_7b151462_7d__7b_7d__7b28694a_7d.jpg"
+        },
+        {
+            "category": "Serum",
+            "pName": "La Roche-Posay Toleriane Dermallergo Serum",
+            "pDescription": "Hydrating and soothing serum for sensitive skin.",
+            "skinType": "Sensitive/reactive skin",
+            "pPrice": "$650",
+            "pImage": "https://www.laroche-posay.com.mx/-/media/project/loreal/brand-sites/lrp/america/latam/products/toleriane/toleriane-ultra-dermallergo-serum/product-1.png?cx=0&amp;ch=600&amp;sc_lang=es-mx&amp;cy=0&amp;cw=600&hash=E12981FA21683C24D3C2B3554484EA6D"
+        },
+        {
+            "category": "Serum",
+            "pName": "Bioderma Sensibio Defensive Serum",
+            "pDescription": "Serum designed to hydrate and soothe sensitive skin.",
+            "skinType": "Sensitive skin",
+            "pPrice": "$550",
+            "pImage": "https://back-ac-prod.bioderma.com/media/catalog/product/cache/b443460c314aa18d2c50e93a48ddeb50/d/e/defensive_serum.jpg"
+        },
+        {
+            "category": "Sunscreen",
+            "pName": "Eucerin Sun Sensitive Protect SPF 50+",
+            "pDescription": "High sun protection for sensitive skin.",
+            "skinType": "Sensitive skin",
+            "pPrice": "$450",
+            "pImage": "https://images-1.eucerin.com/~/media/eucerin%20relaunch%20media/media-center-items/5/f/8/dec02617522c46feb998e95dbb507697-screen.jpg?mw=639&hash=319a303be23af559cff9bf59f1597690"
+        }
+    ]
+}

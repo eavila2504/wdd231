@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adelia Studio | Home</title>
+    <meta name="description" content="A little space when you can feel free to be yourself, and take care of your skin."> 
+    <meta name="author" content="Eli Avila">
+
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="styles/adelia.css">
+    <link rel="stylesheet" href="styles/adelia-larger.css">
+    <link rel="stylesheet" href="styles/home.css">
+
+    <!-- scripts -->
+    <script type="module" src="js/main.js" ></script>
+
+    <!-- Google Fonts -->
+
+    <!-- favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <!-- Open Graph meta tags -->
+    <meta property="og:title" content="Adelia Studio">
+    <meta property="og:description" content="A little space when you can feel free to be yourself, and take care of your skin.">
+    <meta property="og:image" content="images/">
+    <meta property="og:url" content="https://adelia-studio.org">
+</head>
+<body>
+    <header class="site-header">
+    <div class="brand">
+        <img src="images/" alt="" width="40" height="40">
+        <span class="brand-name">Adelia</span><br class="brand-break"> Studio</span>
+    </div>
+
+    <nav id="primary-nav" class="primary-nav">
+        <ul>
+            <li><a href="index.html" aria-current="page">Home</a></li>
+            <li><a href="directory.html">Testimonies</a></li>
+            <li><a href="join.html">Products</a></li>
+            <li><a href="book.html">Book</a></li>
+        </ul>
+    </nav>
+
+    <div class="header-controls">
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-pressed="false" aria-label="Switch to dark mode" title="Switch to dark mode">
+            <svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true">
+                <circle cx="11" cy="11" r="9" fill="none" stroke="currentColor" stroke-width="1.6"/>
+                <path d="M11 2a9 9 0 0 0 0 18Z" fill="currentColor"/>
+            </svg>
+        </button>
+        <button type="button" id="nav-toggle" class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</header>
+    <main>
+        <!--heroSection-->
+        <section class="hero">
+            <h1>Escape into Serenity.</h1>
+            <div class="hero-content">
+
+            </div>
+
+        </section>
+    </main>
+    <footer class="site-footer">
+    <div class="footer-col footer-contact">
+        <p class="footer-org">Adelia Studio</p>
+        <address>
+            calle palma 322<br>
+            Poza Rica, Ver. Mexico 74300<br>
+            <a href="mailto:adelias@skincare.com">adelias@skincare.com</a><br>
+            <a href="tel:+2235552300">(223) 555-2300</a>
+        </address>
+    </div>
+
+    <div class="footer-col footer-social">
+        <a href="https://www.facebook.com" target="_blank"><img src="images/facebook-ch.svg" alt="Facebook svg icon" width="16" height="16"></a>
+        <a href="https://www.youtube.com/" target="_blank"><img src="images/youtube-ch.svg" alt="Youtube svg icon" width="16" height="16"></a>
+        <a href="https://www.instagram.com/" target="_blank"><img src="images/instagram-ch.svg" alt="Instagram svg icon" width="16" height="16"></a>
+    </div>
+
+    <div class="footer-col footer-meta">
+        <p>WDD231 Final Project</p>
+        <p>Eli Avila</p>
+        <p>&copy; <span id="currentyear"></span> Adelia Studio</p>
+        <p id="lastModified"></p>
+    </div>
+</footer>
+</body>
+</html>

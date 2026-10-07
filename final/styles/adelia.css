@@ -1,0 +1,24 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root { 
+    /* color tokens */
+  --light-purple: #D67EC9;
+  --pearl: #F4EEF3;
+  --cream: #F5EBDD;
+
+  /* fonts */
+  --titles:;
+  --pargraphs:;
+}
+
+header, main{
+    background-color: var(--pearl);
+}
+
+footer{
+    background-color: var(--cream);
+}
