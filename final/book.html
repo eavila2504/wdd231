@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adelia Studio | Home</title>
+    <title>Adelia Studio | Book</title>
     <meta name="description" content="A little space when you can feel free to be yourself, and take care of your skin."> 
     <meta name="author" content="Eli Avila">
 
     <!-- stylesheet -->
     <link rel="stylesheet" href="styles/adelia.css">
     <link rel="stylesheet" href="styles/adelia-larger.css">
-    <link rel="stylesheet" href="styles/home.css">
+    <link rel="stylesheet" href="styles/book.css">
 
     <!-- scripts -->
-    <script type="module" src="js/main.js" ></script>
+    <script type="module" src="js/book.js" ></script>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,7 +26,7 @@
     <!-- Open Graph meta tags -->
     <meta property="og:title" content="Adelia Studio">
     <meta property="og:description" content="A little space when you can feel free to be yourself, and take care of your skin.">
-    <meta property="og:image" content="https://images.pexels.com/photos/3985361/pexels-photo-3985361.jpeg">
+    <meta property="og:image" content="images/">
     <meta property="og:url" content="https://adelia-studio.org">
 </head>
 <body>
@@ -38,10 +38,10 @@
 
     <nav id="primary-nav" class="primary-nav">
         <ul>
-            <li><a href="index.html" aria-current="page">Home</a></li>
+            <li><a href="index.html" >Home</a></li>
             <li><a href="testimonies.html">Testimonies</a></li>
             <li><a href="products.html">Products</a></li>
-            <li><a href="book.html">Book</a></li>
+            <li><a href="book.html" aria-current="page">Book</a></li>
         </ul>
     </nav>
 
@@ -58,40 +58,53 @@
     </div>
 </header>
     <main>
-        <!--heroSection-->
-        <section class="hero">
-            <h1>Escape into Serenity.</h1>
-            <div class="hero-content">
-                <p>Step into a world of t/ranquility and discover the secret to radiant skin.</p>
-                <img src="https://images.pexels.com/photos/37229301/pexels-photo-37229301.jpeg" alt="a woman enjoying a facial mask" width="400" height="380">
-                <a class="hero-cta" href="book.html">Book Now</a>
-            </div>
+    <h1>Speak with us!</h1>
+    <p class="join-intro">Know your skin type and what products can improve yourself.</p>
+ 
+    <div class="join-layout">
+ 
+        <form method="get" action="thankyou.html" class="membership-form">
+            <h2>Book an Appointment</h2>
+ 
+            <label>First Name
+                <input type="text" name="first" required
+                       autocomplete="given-name" title="Your first name">
+            </label>
+ 
+            <label>Last Name
+                <input type="text" name="last" required
+                       autocomplete="family-name" title="Your last name">
+            </label>
+ 
+            <label>Email Address
+                <input type="email" name="email" required
+                       autocomplete="email" title="Your email address"
+                       placeholder="john89@gmail.com">
+            </label>
+ 
+            <label>Mobile Phone
+                <input type="tel" name="phone" required
+                       autocomplete="tel" title="Your mobile phone number"
+                       placeholder="987-555-1234">
+            </label>
+ 
+            <label>Give us your Feedback!
+            <textarea name="feedback" required
+                          autocomplete="organization" title="The name of your business or organization"></textarea>
+            </label>
+            <label>
+            what day works better?
+            <input type="date" name="best-day" />
+            </label>
+            <label>
+            what time works better?
+            <input type="time" name="best-time" />
+            </label>
 
-        </section>
-
-        <!--steps section-->
-        <section class="steps">
-            <h2>Your Process</h2>
-            <div class="steps-content">
-                <div class="step">
-                
-                    <h3>Facial Cleansing</h3>
-                    <p>“Clean skin is the first step toward taking care of it.”</p>
-                    <p>Removes impurities, excess oil, and residue accumulated throughout the day.</p>
-                </div>
-                <div class="step">
-                    <h3>Hydration</h3>
-                    <p>“Hydrating means restoring balance to your skin.”</p>
-                    <p>Helps maintain the skin barrier, softness, and a healthy appearance.</p>
-                </div>
-                <div class="step">
-                    <h3>Protect</h3>
-                    <p>“Your skin deserves protection every day, too.”</p>
-                    <p>Sunscreen helps prevent damage caused by UV radiation and photoaging</p>
-                </div>
-            </div>
+            <input type="submit" value="Know my skin" class="submit-button">
 
     </main>
+
     <footer class="site-footer">
     <div class="footer-col footer-contact">
         <p class="footer-org">Adelia Studio</p>
