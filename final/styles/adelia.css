@@ -1,23 +1,327 @@
+/* ==========================================================
+   Adelia Studio — base (mobile first)
+   ========================================================== */
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-:root { 
-    /* color tokens */
-  --light-purple: #D67EC9;
-  --pearl: #F4EEF3;
-  --cream: #F5EBDD;
+:root {
+    /* color tokens (palette) */
+    --light-purple: #D67EC9;
+    --pearl: #F4EEF3;
+    --cream: #F5EBDD;
 
-  /* fonts */
-  
+    /* neutral for text (not part of the palette, only for legibility) */
+    --ink: #2E2430;
+    --ink-soft: #6B5F69;
+    --line: rgba(46, 36, 48, 0.12);
+
+    /* surfaces */
+    --bg: var(--pearl);
+    --bg-footer: var(--cream);
+    --accent: var(--light-purple);
+    --on-accent: var(--ink);
+
+    /* fonts */
+    --font-title: "Merriweather", Georgia, serif;
+    --font-body: "Open Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+    /* spacing */
+    --space-s: 0.5rem;
+    --space-m: 1rem;
+    --space-l: 2rem;
+    --header-h: 4.25rem;
 }
 
-header, main{
-    background-color: var(--pearl);
+[data-theme="dark"] {
+    --bg: #1F1820;
+    --bg-footer: #2A212B;
+    --ink: #F4EEF3;
+    --ink-soft: #CDBFCB;
+    --line: rgba(244, 238, 243, 0.14);
 }
 
-footer{
-    background-color: var(--cream);
+html {
+    scroll-padding-top: var(--header-h);
+}
+
+body {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: 1.65;
+    color: var(--ink);
+    background-color: var(--bg);
+}
+
+header,
+main {
+    background-color: var(--bg);
+}
+
+footer {
+    background-color: var(--bg-footer);
+}
+
+/* ---------- typography ---------- */
+h1, h2, h3,
+button,
+.hero-cta,
+.submit-button {
+    font-family: var(--font-title);
+}
+
+h1 {
+    font-size: clamp(1.9rem, 6vw, 2.9rem);
+    font-weight: 300;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    color: var(--accent);
+    font-weight: 500;
+}
+
+h2 {
+    font-size: clamp(1.4rem, 4vw, 1.9rem);
+    font-weight: 400;
+    line-height: 1.3;
+}
+
+h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    line-height: 1.35;
+}
+
+p {
+    max-width: 62ch;
+}
+
+a {
+    color: inherit;
+}
+
+:focus-visible {
+    outline: 2px solid var(--ink);
+    outline-offset: 3px;
+    border-radius: 2px;
+}
+
+/* ==========================================================
+   Header — minimal, same pearl as the body
+   ========================================================== */
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-m);
+    min-height: var(--header-h);
+    padding: 0.75rem var(--space-m);
+    background-color: var(--bg);
+    border-bottom: 1px solid var(--line);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-family: var(--font-title);
+    font-size: 1.05rem;
+    font-weight: 400;
+    line-height: 1.15;
+}
+
+.brand-name {
+    font-weight: 700;
+}
+
+.brand-break {
+    display: none;
+}
+
+/* mobile nav: dropdown under the header */
+.primary-nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    display: none;
+    background-color: var(--bg);
+    border-bottom: 1px solid var(--line);
+}
+
+.primary-nav.is-open {
+    display: block;
+}
+
+.primary-nav ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: var(--space-s) var(--space-m) var(--space-m);
+}
+
+.primary-nav a {
+    display: block;
+    padding: 0.75rem 0;
+    text-decoration: none;
+    font-size: 0.95rem;
+    color: var(--ink-soft);
+    border-bottom: 1px solid var(--line);
+}
+
+.primary-nav a:hover,
+.primary-nav a[aria-current="page"] {
+    color: var(--ink);
+}
+
+.primary-nav a[aria-current="page"] {
+    font-weight: 600;
+}
+
+/* "Book" is the only filled item */
+.primary-nav li:last-child a {
+    margin-top: var(--space-m);
+    padding: 0.7rem 1.4rem;
+    text-align: center;
+    font-family: var(--font-title);
+    font-weight: 700;
+    color: var(--bg);
+    background-color: var(--accent);
+    border: 0;
+    border-radius: 999px;
+}
+
+.primary-nav li:last-child a:hover {
+    filter: brightness(0.95);
+}
+
+/* header buttons */
+.header-controls {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.theme-toggle,
+.nav-toggle {
+    display: inline-grid;
+    place-items: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    color: var(--ink);
+    background: none;
+    border: 0;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.theme-toggle:hover,
+.nav-toggle:hover {
+    background-color: var(--line);
+}
+
+.nav-toggle {
+    gap: 4px;
+    align-content: center;
+}
+
+.nav-toggle span {
+    display: block;
+    width: 18px;
+    height: 1.5px;
+    background-color: currentColor;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.nav-toggle[aria-expanded="true"] span:nth-child(1) {
+    transform: translateY(5.5px) rotate(45deg);
+}
+
+.nav-toggle[aria-expanded="true"] span:nth-child(2) {
+    opacity: 0;
+}
+
+.nav-toggle[aria-expanded="true"] span:nth-child(3) {
+    transform: translateY(-5.5px) rotate(-45deg);
+}
+
+/* ==========================================================
+   Shared buttons
+   ========================================================== */
+
+.hero-cta,
+.submit-button {
+    display: inline-block;
+    padding: 0.8rem 1.8rem;
+    font-size: 1rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--bg);
+    background-color: var(--accent);
+    border: 0;
+    border-radius: 999px;
+    cursor: pointer;
+    width: 139px;
+}
+
+.hero-cta:hover,
+.submit-button:hover {
+    filter: brightness(0.95);
+}
+
+/* ==========================================================
+   Main + footer
+   ========================================================== */
+
+main {
+    padding: var(--space-l) var(--space-m);
+}
+
+.site-footer {
+    display: grid;
+    gap: var(--space-l);
+    padding: var(--space-l) var(--space-m);
+    font-size: 0.9rem;
+    color: var(--ink-soft);
+}
+
+.site-footer address {
+    font-style: normal;
+}
+
+.footer-org {
+    font-family: var(--font-title);
+    font-weight: 700;
+    color: var(--ink);
+}
+
+.footer-social {
+    display: flex;
+    gap: 1.25rem;
+
+}
+
+.footer-social a {
+    display: inline-grid;
+    place-items: center;
+    width: 2.75rem;      
+    height: 2.75rem;
+}
+
+.footer-social img {
+    width: 1.75rem;     
+    height: 1.75rem;
+    
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        transition: none !important;
+    }
 }

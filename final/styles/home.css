@@ -1,0 +1,97 @@
+/* ==========================================================
+   Home — hero + process steps
+   ========================================================== */
+
+.hero {
+    display: grid;
+    gap: var(--space-m);
+    padding-bottom: var(--space-l);
+}
+
+.hero-content {
+    display: grid;
+    gap: var(--space-m);
+    justify-items: start;
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    color: var(--ink-soft);
+}
+
+.hero-content img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 400 / 380;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+.steps {
+    padding-top: var(--space-l);
+    border-top: 1px solid var(--line);
+}
+
+.steps h2 {
+    margin-bottom: var(--space-m);
+}
+
+.steps-content {
+    display: grid;
+    gap: var(--space-l);
+}
+
+.step h3 {
+    margin-bottom: var(--space-s);
+}
+
+/* the quote is the first paragraph of each step */
+.step p:first-of-type {
+    font-family: var(--font-title);
+    font-weight: 300;
+    font-style: italic;
+    margin-bottom: var(--space-s);
+}
+
+.step p:last-of-type {
+    font-size: 0.95rem;
+    color: var(--ink-soft);
+}
+
+@media (min-width: 768px) {
+    .hero {
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        column-gap: 3rem;
+    }
+
+    .hero h1 {
+        grid-column: 1;
+        align-self: end;
+    }
+
+    .hero-content {
+        display: contents;
+    }
+
+    .hero-content p {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .hero-content .hero-cta {
+        grid-column: 1;
+        grid-row: 3;
+        align-self: start;
+    }
+
+    .hero-content img {
+        grid-column: 2;
+        grid-row: 1 / span 3;
+    }
+
+    .steps-content {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2.5rem;
+    }
+}

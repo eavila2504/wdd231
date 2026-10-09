@@ -1,0 +1,103 @@
+/* ==========================================================
+   Adelia Studio — tablet / desktop (min-width: 768px)
+   ========================================================== */
+
+@media (min-width: 768px) {
+
+    .site-header {
+        padding: 0.75rem 2.5rem;
+        gap: 2rem;
+    }
+
+    .brand-break {
+        display: inline;
+    }
+
+    /* the nav, its list and the controls become direct flex items of the header
+       so "Book" can sit in the top-right corner */
+    .primary-nav,
+    .primary-nav ul {
+        display: contents;
+    }
+
+    .primary-nav {
+        position: static;
+        border: 0;
+    }
+
+    .primary-nav ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .primary-nav li {
+        order: 1;
+    }
+
+    .primary-nav a {
+        padding: 0.4rem 0;
+        border-bottom: 2px solid transparent;
+    }
+
+    .primary-nav a:hover {
+        border-bottom-color: var(--accent);
+    }
+
+    .primary-nav a[aria-current="page"] {
+        border-bottom-color: var(--accent);
+    }
+
+    .primary-nav li:first-child {
+        margin-left: auto;   /* push links to the right of the brand */
+    }
+
+    .primary-nav li + li {
+        margin-left: -1rem;  /* tighten: header gap is 2rem, links need ~1rem */
+    }
+
+    .header-controls {
+        order: 2;
+    }
+
+    /* Book: last item, top-right corner */
+    .primary-nav li:last-child {
+        order: 3;
+    }
+
+    .primary-nav li:last-child a {
+        margin: 0 0 0 1rem;
+        padding: 0.55rem 1.4rem;
+        border-bottom: 0;
+    }
+
+    .nav-toggle {
+        display: none;
+    }
+
+    main {
+        padding: 3rem 2.5rem;
+    }
+
+    .site-footer {
+        grid-template-columns: repeat(3, 1fr);
+        padding: 2.5rem;
+    }
+
+    .footer-social {
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .footer-meta {
+        text-align: right;
+    }
+}
+
+@media (min-width: 1100px) {
+    .site-header,
+    .site-footer,
+    main {
+        padding-left: max(2.5rem, calc((100vw - 1100px) / 2));
+        padding-right: max(2.5rem, calc((100vw - 1100px) / 2));
+    }
+}
