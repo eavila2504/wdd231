@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adelia Studio | Book</title>
-    <meta name="description" content="A little space when you can feel free to be yourself, and take care of your skin."> 
+    <meta name="description" content="A little space where you can get help and guidance to know your ski type and what products can improve yourself."> 
     <meta name="author" content="Eli Avila">
 
     <!-- stylesheet -->
@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="styles/book.css">
 
     <!-- scripts -->
-    <script type="module" src="js/book.js" ></script>
+    <script type="module" src="scripts/book.js" ></script>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,7 +25,7 @@
 
     <!-- Open Graph meta tags -->
     <meta property="og:title" content="Adelia Studio">
-    <meta property="og:description" content="A little space when you can feel free to be yourself, and take care of your skin.">
+    <meta property="og:description" content="A little space where you can get help and guidance to know your skin type and what products can improve yourself.">
     <meta property="og:image" content="images/">
     <meta property="og:url" content="https://adelia-studio.org">
 </head>
@@ -58,53 +58,53 @@
     </div>
 </header>
     <main>
-    <h1>Speak with us!</h1>
-    <p class="join-intro">Know your skin type and what products can improve yourself.</p>
+        <h1>Speak with us!</h1>
+        <p class="join-intro">Know your skin type and what products can improve yourself.</p>
  
-    <div class="join-layout">
+        <div class="join-layout">
+            <form method="get" action="thankyou.html" class="membership-form">
+                <h2>Book an appointment</h2>
  
-        <form method="get" action="thankyou.html" class="membership-form">
-            <h2>Book an Appointment</h2>
+                <label>First name
+                    <input type="text" name="first" required
+                           autocomplete="given-name" title="Your first name">
+                </label>
  
-            <label>First Name
-                <input type="text" name="first" required
-                       autocomplete="given-name" title="Your first name">
-            </label>
+                <label>Last name
+                    <input type="text" name="last" required
+                           autocomplete="family-name" title="Your last name">
+                </label>
  
-            <label>Last Name
-                <input type="text" name="last" required
-                       autocomplete="family-name" title="Your last name">
-            </label>
+                <label>Email address
+                    <input type="email" name="email" required
+                           autocomplete="email" title="Your email address"
+                           placeholder="john89@gmail.com">
+                </label>
  
-            <label>Email Address
-                <input type="email" name="email" required
-                       autocomplete="email" title="Your email address"
-                       placeholder="john89@gmail.com">
-            </label>
+                <label>Mobile phone
+                    <input type="tel" name="phone" required
+                           autocomplete="tel" title="Your mobile phone number"
+                           placeholder="987-555-1234">
+                </label>
  
-            <label>Mobile Phone
-                <input type="tel" name="phone" required
-                       autocomplete="tel" title="Your mobile phone number"
-                       placeholder="987-555-1234">
-            </label>
+                <label class="field-wide">Tell us about your skin
+                    <textarea name="feedback" required
+                              title="Tell us about your skin or leave us a note"></textarea>
+                </label>
  
-            <label>Give us your Feedback!
-            <textarea name="feedback" required
-                          autocomplete="organization" title="The name of your business or organization"></textarea>
-            </label>
-            <label>
-            what day works better?
-            <input type="date" name="best-day" />
-            </label>
-            <label>
-            what time works better?
-            <input type="time" name="best-time" />
-            </label>
-
-            <input type="submit" value="Know my skin" class="submit-button">
-
+                <label>Preferred day
+                    <input type="date" name="best-day">
+                </label>
+ 
+                <label>Preferred time
+                    <input type="time" name="best-time">
+                </label>
+ 
+                <input type="submit" value="Know my skin" class="submit-button">
+            </form>
+        </div>
     </main>
-
+    
     <footer class="site-footer">
     <div class="footer-col footer-contact">
         <p class="footer-org">Adelia Studio</p>

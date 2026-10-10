@@ -1,0 +1,121 @@
+/* ==========================================================
+   Book — appointment form
+   ========================================================== */
+
+[data-theme="dark"] {
+    color-scheme: dark;   /* native date/time pickers follow the theme */
+}
+
+main > h1 {
+    margin-bottom: var(--space-s);
+}
+
+.join-intro {
+    margin-bottom: var(--space-l);
+    font-size: 1.05rem;
+    color: var(--ink-soft);
+}
+
+/* ---------- form card ---------- */
+.membership-form {
+    display: grid;
+    gap: 1.1rem;
+    padding: 1.75rem 1.5rem;
+    background-color: var(--bg-footer);
+    border-radius: 1rem;
+}
+
+.membership-form h2 {
+    margin-bottom: 0.25rem;
+}
+
+.membership-form label {
+    display: grid;
+    gap: 0.4rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--ink);
+}
+
+.membership-form input:not([type="submit"]),
+.membership-form textarea {
+    width: 100%;
+    padding: 0.7rem 0.85rem;
+    font: inherit;
+    font-weight: 400;
+    color: var(--ink);
+    background-color: var(--bg);
+    border: 1px solid var(--line);
+    border-radius: 0.6rem;
+}
+
+.membership-form textarea {
+    min-height: 7.5rem;
+    resize: vertical;
+}
+
+.membership-form ::placeholder {
+    color: var(--ink-soft);
+    opacity: 0.7;
+}
+
+.membership-form input:not([type="submit"]):focus,
+.membership-form textarea:focus {
+    outline: 2px solid var(--accent);
+    outline-offset: 1px;
+    border-color: var(--accent);
+}
+
+/* shown only after the person has interacted with the field */
+.membership-form input:user-invalid,
+.membership-form textarea:user-invalid {
+    border-color: #B3425A;
+}
+
+.membership-form .submit-button {
+    width: 100%;
+    margin-top: 0.5rem;
+    padding: 0.9rem 1.8rem;
+}
+
+/* ---------- tablet / desktop ---------- */
+@media (min-width: 768px) {
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1.25fr;
+        grid-template-rows: auto 1fr;
+        column-gap: 4rem;
+        align-items: start;
+    }
+
+    main > h1 {
+        grid-column: 1;
+        grid-row: 1;
+        margin-bottom: 0;
+        padding-top: 1rem;
+    }
+
+    .join-intro {
+        grid-column: 1;
+        grid-row: 2;
+        margin-top: var(--space-m);
+    }
+
+    .join-layout {
+        grid-column: 2;
+        grid-row: 1 / span 2;
+    }
+
+    .membership-form {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 1.25rem;
+        padding: 2.25rem 2rem;
+    }
+
+    /* full-width rows */
+    .membership-form h2,
+    .membership-form .field-wide,
+    .membership-form .submit-button {
+        grid-column: 1 / -1;
+    }
+}

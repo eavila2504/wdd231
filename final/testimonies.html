@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adelia Studio | Home</title>
-    <meta name="description" content="A little space when you can feel free to be yourself, and take care of your skin."> 
+    <title>Adelia Studio | Testimonies</title>
+    <meta name="description" content="Hear about the experiences of our clients and how our services have positively impacted their lives."> 
     <meta name="author" content="Eli Avila">
 
     <!-- stylesheet -->
     <link rel="stylesheet" href="styles/adelia.css">
     <link rel="stylesheet" href="styles/adelia-larger.css">
-    <link rel="stylesheet" href="styles/home.css">
+    <link rel="stylesheet" href="styles/testimonies.css">
 
     <!-- scripts -->
-    <script type="module" src="js/testimonies.js" ></script>
+    <script type="module" src="scripts/testimonies.js" ></script>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,7 +25,7 @@
 
     <!-- Open Graph meta tags -->
     <meta property="og:title" content="Adelia Studio">
-    <meta property="og:description" content="A little space when you can feel free to be yourself, and take care of your skin.">
+    <meta property="og:description" content="Hear about the experiences of our clients and how our services have positively impacted their lives.">
     <meta property="og:image" content="images/">
     <meta property="og:url" content="https://adelia-studio.org">
 </head>
@@ -58,7 +58,58 @@
     </div>
 </header>
     <main>
-       
+         
+        <section class="testimonies-intro">
+            <h1>What our clients say</h1>
+            <p>Real words from people who found a routine that fits their skin.</p>
+        </section>
+ 
+        <!-- Static sample: later, js/testimonies.js will build these <li> items from testimonies.json -->
+        <ul class="testimonies-list" id="testimonies-list">
+            <li>
+                <figure class="testimony">
+                    <blockquote>
+                        <p>I had an amazing experience with this service. Highly recommend it!</p>
+                    </blockquote>
+                    <figcaption>
+                        <span class="testimony-avatar" aria-hidden="true">J</span>
+                        <div>
+                            <p class="testimony-name">John Doe</p>
+                            <p class="testimony-meta">30 years old, New York</p>
+                        </div>
+                    </figcaption>
+                </figure>
+            </li>
+            <li>
+                <figure class="testimony">
+                    <blockquote>
+                        <p>The team was very professional and helpful. I am very satisfied.</p>
+                    </blockquote>
+                    <figcaption>
+                        <span class="testimony-avatar" aria-hidden="true">J</span>
+                        <div>
+                            <p class="testimony-name">Jane Smith</p>
+                            <p class="testimony-meta">25 years old, Los Angeles</p>
+                        </div>
+                    </figcaption>
+                </figure>
+            </li>
+            <li>
+                <figure class="testimony">
+                    <blockquote>
+                        <p>I was impressed by the quality and speed of the service. Will use again.</p>
+                    </blockquote>
+                    <figcaption>
+                        <span class="testimony-avatar" aria-hidden="true">M</span>
+                        <div>
+                            <p class="testimony-name">Mike Johnson</p>
+                            <p class="testimony-meta">40 years old, Chicago</p>
+                        </div>
+                    </figcaption>
+                </figure>
+            </li>
+        </ul>
+
     </main>
     <footer class="site-footer">
     <div class="footer-col footer-contact">
