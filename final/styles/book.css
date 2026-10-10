@@ -2,9 +2,7 @@
    Book — appointment form
    ========================================================== */
 
-[data-theme="dark"] {
-    color-scheme: dark;   /* native date/time pickers follow the theme */
-}
+
 
 main > h1 {
     margin-bottom: var(--space-s);

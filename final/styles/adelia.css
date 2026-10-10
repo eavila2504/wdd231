@@ -37,6 +37,7 @@
 }
 
 [data-theme="dark"] {
+    color-scheme: dark;   /* native date/time pickers follow the theme */
     --bg: #1F1820;
     --bg-footer: #2A212B;
     --ink: #F4EEF3;
