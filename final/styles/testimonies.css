@@ -113,3 +113,43 @@
         margin-top: 2rem;
     }
 }
+
+/* ==========================================================
+   Rotation: fade between sets + controls
+   ========================================================== */
+
+.testimonies-list {
+    transition: opacity 0.35s ease, transform 0.35s ease;   /* keep in sync with FADE_MS */
+}
+
+.testimonies-list.is-fading {
+    opacity: 0;
+    transform: translateY(0.5rem);
+}
+
+.testimonies-status {
+    grid-column: 1 / -1;
+    color: var(--ink-soft);
+}
+
+.testimonies-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: var(--space-l);
+}
+
+.control-button {
+    padding: 0.55rem 1.3rem;
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: var(--ink);
+    background: none;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    cursor: pointer;
+}
+
+.control-button:hover {
+    border-color: var(--ink-soft);
+}

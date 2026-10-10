@@ -58,58 +58,19 @@
     </div>
 </header>
     <main>
-         
-        <section class="testimonies-intro">
+         <section class="testimonies-intro">
             <h1>What our clients say</h1>
             <p>Real words from people who found a routine that fits their skin.</p>
-        </section>
- 
-        <!-- Static sample: later, js/testimonies.js will build these <li> items from testimonies.json -->
-        <ul class="testimonies-list" id="testimonies-list">
-            <li>
-                <figure class="testimony">
-                    <blockquote>
-                        <p>I had an amazing experience with this service. Highly recommend it!</p>
-                    </blockquote>
-                    <figcaption>
-                        <span class="testimony-avatar" aria-hidden="true">J</span>
-                        <div>
-                            <p class="testimony-name">John Doe</p>
-                            <p class="testimony-meta">30 years old, New York</p>
-                        </div>
-                    </figcaption>
-                </figure>
-            </li>
-            <li>
-                <figure class="testimony">
-                    <blockquote>
-                        <p>The team was very professional and helpful. I am very satisfied.</p>
-                    </blockquote>
-                    <figcaption>
-                        <span class="testimony-avatar" aria-hidden="true">J</span>
-                        <div>
-                            <p class="testimony-name">Jane Smith</p>
-                            <p class="testimony-meta">25 years old, Los Angeles</p>
-                        </div>
-                    </figcaption>
-                </figure>
-            </li>
-            <li>
-                <figure class="testimony">
-                    <blockquote>
-                        <p>I was impressed by the quality and speed of the service. Will use again.</p>
-                    </blockquote>
-                    <figcaption>
-                        <span class="testimony-avatar" aria-hidden="true">M</span>
-                        <div>
-                            <p class="testimony-name">Mike Johnson</p>
-                            <p class="testimony-meta">40 years old, Chicago</p>
-                        </div>
-                    </figcaption>
-                </figure>
-            </li>
-        </ul>
+         </section>
 
+          <ul class="testimonies-list" id="testimonies-list" aria-busy="true">
+            <li class="testimonies-status">Loading testimonies…</li>
+        </ul>
+ 
+        <div class="testimonies-controls">
+            <button type="button" id="shuffle-btn" class="control-button">Show others</button>
+            <button type="button" id="autoplay-btn" class="control-button">Pause</button>
+        </div>
     </main>
     <footer class="site-footer">
     <div class="footer-col footer-contact">

@@ -191,7 +191,7 @@ a {
     text-align: center;
     font-family: var(--font-title);
     font-weight: 700;
-    color: var(--bg);
+    color: var(--ink);
     background-color: var(--accent);
     border: 0;
     border-radius: 999px;
@@ -262,7 +262,7 @@ a {
     font-size: 1rem;
     font-weight: 700;
     text-decoration: none;
-    color: var(--bg);
+    color: var(--ink);
     background-color: var(--accent);
     border: 0;
     border-radius: 999px;

@@ -1,27 +1,78 @@
-{"testimonies": [
+
+{
+  "testimonies": [
     {
-        "id": 1,
-        "name": "John Doe",
-        "age": 30,
-        "location": "New York",
-        "testimony": "I had an amazing experience with this service. Highly recommend it!",
-        "imageURL": ""
+      "id": 1,
+      "name": "John Doe",
+      "age": 30,
+      "location": "New York",
+      "testimony": "I had an amazing experience with this service. Highly recommend it!",
+      "imageURL": "https://www.pexels.com/photo/young-man-checking-time-in-lush-garden-39514928/"
     },
     {
-        "id": 2,
-        "name": "Jane Smith",
-        "age": 25,
-        "location": "Los Angeles",
-        "testimony": "The team was very professional and helpful. I am very satisfied.",
-        "imageURL": ""
+      "id": 2,
+      "name": "Jane Smith",
+      "age": 25,
+      "location": "Los Angeles",
+      "testimony": "The team was very professional and helpful. I am very satisfied.",
+      "imageURL": "https://www.pexels.com/photo/black-woman-with-afro-looking-at-camera-5433146/"
     },
     {
-        "id": 3,
-        "name": "Mike Johnson",
-        "age": 40,
-        "location": "Chicago",
-        "testimony": "I was impressed by the quality and speed of the service. Will use again.",
-        "imageURL": ""
+      "id": 3,
+      "name": "Mike Johnson",
+      "age": 24,
+      "location": "Chicago",
+      "testimony": "I was impressed by the quality and speed of the service. Will use again.",
+      "imageURL": "https://www.pexels.com/photo/man-in-a-brown-coat-black-hoodie-and-sunglasses-posing-in-city-15396621/"
+    },
+    {
+      "id": 4,
+      "name": "Emily Carter",
+      "age": 28,
+      "location": "Miami",
+      "testimony": "The facial treatment left my skin feeling soft, hydrated, and refreshed. The staff made me feel comfortable throughout the entire experience.",
+      "imageURL": "https://images.pexels.com/photos/3776446/pexels-photo-3776446.jpeg"
+    },
+    {
+      "id": 5,
+      "name": "Sofia Martinez",
+      "age": 32,
+      "location": "Los Angeles",
+      "testimony": "I noticed an improvement in my skin's texture after my skincare session. The atmosphere was relaxing, and the products felt gentle on my skin.",
+      "imageURL": "https://www.pexels.com/photo/young-woman-standing-in-front-of-carousel-40070436/"
+
+    },
+    {
+      "id": 6,
+      "name": "Olivia Bennett",
+      "age": 26,
+      "location": "San Diego",
+      "testimony": "My visit was wonderful! The esthetician explained every step of the treatment and recommended a skincare routine that works well for me.",
+      "imageURL": "https://www.pexels.com/photo/photo-of-woman-wearing-white-shirt-2701660/"
+    },
+    {
+      "id": 7,
+      "name": "Isabella Rivera",
+      "age": 35,
+      "location": "Austin",
+      "testimony": "The deep cleansing facial was exactly what my skin needed. My face felt cleaner, smoother, and more radiant afterward.",
+      "imageURL": "https://images.pexels.com/photos/14603123/pexels-photo-14603123.jpeg"    
+    },
+    {
+      "id": 8,
+      "name": "Charlotte Wilson",
+      "age": 29,
+      "location": "Seattle",
+      "testimony": "I loved the peaceful environment and personalized attention. The hydrating treatment left my skin feeling nourished, and I would definitely visit again.",
+      "imageURL": "https://www.pexels.com/photo/closeup-of-a-woman-wearing-a-glittering-net-textile-against-red-background-18284532/"
+    },
+    {
+      "id": 9,
+      "name": "Ava Thompson",
+      "age": 31,
+      "location": "Boston",
+      "testimony": "This spa exceeded my expectations. The skincare treatment was relaxing, and the professional advice helped me better understand how to care for my skin.",
+      "imageURL": "https://www.pexels.com/photo/portrait-of-a-person-wearing-white-long-sleeves-10157905/"
     }
-    
-]}
+  ]
+}
