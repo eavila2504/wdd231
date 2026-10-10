@@ -1,6 +1,8 @@
 import { initHeader, initFooter } from "./header.js";
 import { getJSON } from "./data.js";
 
+// Path is relative to the HTML page (products.html), not to this file.
+// Change it if your products.json lives somewhere else (e.g. "products.json").
 const DATA_URL = "data/products.json";
 
 // The skinType strings in the JSON are free text ("Combination/oily acne-prone skin"),
@@ -22,6 +24,13 @@ const count = document.getElementById("results-count");
 const categoryBar = document.getElementById("category-filter");
 const skinSelect = document.getElementById("skin-filter");
 const sortSelect = document.getElementById("sort-by");
+
+// If any of these is missing, products.html is not the updated version.
+if (!grid || !count || !categoryBar || !skinSelect || !sortSelect) {
+    throw new Error(
+        "products.html is missing #products-grid, #results-count, #category-filter, #skin-filter or #sort-by."
+    );
+}
 
 // ---------- helpers ----------
 function el(tag, className, text) {
@@ -52,11 +61,11 @@ function getVisibleProducts() {
 }
 
 // ---------- rendering ----------
-function createImage(product) {
-    const frame = el("div", "product-image");
+function createImage(product, alt = "") {
+    const frame = el("span", "product-image");
     const img = document.createElement("img");
     img.src = product.pImage;
-    img.alt = product.pName;
+    img.alt = alt;               // empty in the grid: the name is already next to it
     img.loading = "lazy";
     img.width = 300;
     img.height = 300;
@@ -69,21 +78,86 @@ function createImage(product) {
     return frame;
 }
 
+// STEP 1: the grid card only shows image, name and price. It is a <button>,
+// so it works with keyboard and screen readers, and opens the popup.
 function createCard(product) {
     const item = el("li");
-    const card = el("article", "product");
+    const card = el("button", "product");
+    card.type = "button";
+    card.setAttribute("aria-haspopup", "dialog");
 
-    const body = el("div", "product-body");
-    body.append(
-        el("p", "product-category", product.category),
-        el("h3", "product-name", product.pName),
-        el("p", "product-description", product.pDescription),
-        el("p", "product-skin", product.skinType)
-    );
+    const body = el("span", "product-body");
+    body.append(el("span", "product-name", product.pName), el("span", "product-price", product.pPrice));
 
-    card.append(createImage(product), body, el("p", "product-price", product.pPrice));
+    card.append(createImage(product), body);
+    card.addEventListener("click", () => openProduct(product));
     item.append(card);
     return item;
+}
+
+// ---------- STEP 2: the popup (native <dialog>) ----------
+// <dialog>.showModal() gives us for free: Esc to close, focus kept inside,
+// the page behind is inert, and focus returns to the card when it closes.
+const popup = {};
+
+function buildDialog() {
+    const dialog = el("dialog", "product-dialog");
+    dialog.setAttribute("aria-labelledby", "dialog-title");
+
+    const content = el("div", "dialog-content");
+
+    const close = el("button", "dialog-close", "\u00D7");
+    close.type = "button";
+    close.setAttribute("aria-label", "Close");
+    close.addEventListener("click", () => dialog.close());
+
+    popup.image = el("div", "dialog-image");
+
+    popup.category = el("p", "dialog-category");
+    popup.title = el("h2", "dialog-title");
+    popup.title.id = "dialog-title";
+    popup.description = el("p", "dialog-description");
+    popup.skin = el("p", "dialog-skin");
+    popup.price = el("p", "dialog-price");
+
+    const book = el("a", "hero-cta", "Book a visit");
+    book.href = "book.html";
+
+    const body = el("div", "dialog-body");
+    body.append(
+        popup.category,
+        popup.title,
+        popup.description,
+        el("h3", "dialog-subtitle", "Skin types"),
+        popup.skin,
+        popup.price,
+        book
+    );
+
+    content.append(close, popup.image, body);
+    dialog.append(content);
+
+    // a click on the dark area outside the content closes it
+    dialog.addEventListener("click", (event) => {
+        if (event.target === dialog) dialog.close();
+    });
+
+    document.body.append(dialog);
+    popup.dialog = dialog;
+}
+
+function openProduct(product) {
+    if (!popup.dialog) buildDialog();
+
+    popup.image.replaceChildren(createImage(product, product.pName));
+    popup.category.textContent = product.category;
+    popup.title.textContent = product.pName;
+    popup.description.textContent = product.pDescription;
+    popup.skin.textContent = product.skinType;
+    popup.price.textContent = product.pPrice;
+
+    popup.dialog.showModal();
+    popup.dialog.scrollTop = 0;
 }
 
 function render() {
@@ -152,7 +226,8 @@ async function init() {
         grid.replaceChildren(
             el("li", "products-empty", "We couldn't load the products. Please try again later.")
         );
-        count.textContent = "";
+        // Technical detail so the problem can be found while developing
+        count.textContent = `${error.message} (looked for: ${new URL(DATA_URL, location.href).href})`;
     }
 }
 

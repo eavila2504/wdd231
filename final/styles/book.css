@@ -1,8 +1,6 @@
 /* ==========================================================
-   Book — appointment form
+   Book — appointment form + branches map
    ========================================================== */
-
-
 
 main > h1 {
     margin-bottom: var(--space-s);
@@ -36,6 +34,7 @@ main > h1 {
 }
 
 .membership-form input:not([type="submit"]),
+.membership-form select,
 .membership-form textarea {
     width: 100%;
     padding: 0.7rem 0.85rem;
@@ -58,6 +57,7 @@ main > h1 {
 }
 
 .membership-form input:not([type="submit"]):focus,
+.membership-form select:focus,
 .membership-form textarea:focus {
     outline: 2px solid var(--accent);
     outline-offset: 1px;
@@ -76,32 +76,149 @@ main > h1 {
     padding: 0.9rem 1.8rem;
 }
 
-/* ---------- tablet / desktop ---------- */
+/* ==========================================================
+   Branches map
+   ========================================================== */
+
+.branches {
+    margin-top: var(--space-l);
+}
+
+.branches h2 {
+    margin-bottom: var(--space-m);
+}
+
+#branches-map {
+    position: relative;
+    z-index: 0;               /* keeps Leaflet's layers under the sticky header */
+    height: 22rem;
+    color: var(--ink-soft);
+    background-color: var(--bg-footer);
+    border: 1px solid var(--line);
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.leaflet-container {
+    font-family: var(--font-body);
+}
+
+/* brand pin (drawn with CSS, no image files) */
+.branch-pin span {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: var(--light-purple);
+    border: 3px solid #fff;
+    border-radius: 50% 50% 50% 0;
+    transform: rotate(-45deg);
+    box-shadow: 0 2px 6px rgba(46, 36, 48, 0.35);
+}
+
+/* popups are always white, so they use fixed colors, not the theme tokens */
+.branch-popup {
+    display: grid;
+    gap: 0.25rem;
+    color: #2E2430;
+    font-size: 0.85rem;
+    line-height: 1.45;
+}
+
+.branch-popup-name {
+    font-family: var(--font-title);
+    font-size: 0.95rem;
+}
+
+.popup-button {
+    justify-self: start;
+    margin-top: 0.4rem;
+    padding: 0.4rem 1rem;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #2E2430;
+    background-color: var(--light-purple);
+    border: 0;
+    border-radius: 999px;
+    cursor: pointer;
+}
+
+/* list under the map */
+.branches-list {
+    display: grid;
+    gap: 0.5rem;
+    margin-top: var(--space-m);
+    list-style: none;
+}
+
+.branch-item {
+    display: grid;
+    gap: 0.1rem;
+    width: 100%;
+    padding: 0.75rem 1rem;
+    text-align: left;
+    font-family: var(--font-body);
+    color: var(--ink);
+    background: none;
+    border: 1px solid var(--line);
+    border-radius: 0.75rem;
+    cursor: pointer;
+}
+
+.branch-item:hover {
+    border-color: var(--ink-soft);
+}
+
+.branch-item[aria-pressed="true"] {
+    border-color: var(--accent);
+    background-color: var(--bg-footer);
+}
+
+.branch-item-name {
+    font-family: var(--font-title);
+    font-size: 0.95rem;
+    font-weight: 700;
+}
+
+.branch-item-address {
+    font-size: 0.85rem;
+    color: var(--ink-soft);
+}
+
+/* ---------- tablet / desktop: form left, map right ---------- */
 @media (min-width: 768px) {
     main {
         display: grid;
-        grid-template-columns: 1fr 1.25fr;
-        grid-template-rows: auto 1fr;
-        column-gap: 4rem;
+        grid-template-columns: 1.1fr 1fr;
+        grid-template-rows: auto auto 1fr;
+        column-gap: 3rem;
         align-items: start;
     }
 
     main > h1 {
         grid-column: 1;
         grid-row: 1;
-        margin-bottom: 0;
-        padding-top: 1rem;
     }
 
     .join-intro {
         grid-column: 1;
         grid-row: 2;
-        margin-top: var(--space-m);
     }
 
     .join-layout {
+        grid-column: 1;
+        grid-row: 3;
+    }
+
+    .branches {
         grid-column: 2;
-        grid-row: 1 / span 2;
+        grid-row: 1 / span 3;
+        position: sticky;
+        top: calc(var(--header-h) + 1.5rem);
+        margin-top: 0;
+    }
+
+    #branches-map {
+        height: min(26rem, 55vh);
     }
 
     .membership-form {

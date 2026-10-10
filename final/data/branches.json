@@ -1,0 +1,54 @@
+{
+  "branches": [
+    {
+      "id": "poza-rica",
+      "name": "Poza Rica",
+      "label": "Main studio",
+      "address": "Calle Palma 322, Poza Rica, Ver. 74300",
+      "phone": "(223) 555-2300",
+      "hours": "Mon to Sat, 10:00 to 19:00",
+      "lat": 20.5331,
+      "lng": -97.4592
+    },
+    {
+      "id": "xalapa",
+      "name": "Xalapa",
+      "label": "Branch",
+      "address": "Av. Xalapa 100, Centro, Xalapa, Ver.",
+      "phone": "(228) 555-0142",
+      "hours": "Mon to Sat, 10:00 to 19:00",
+      "lat": 19.5438,
+      "lng": -96.9102
+    },
+    {
+      "id": "veracruz",
+      "name": "Veracruz",
+      "label": "Branch",
+      "address": "Blvd. Manuel Avila Camacho 200, Veracruz, Ver.",
+      "phone": "(229) 555-0187",
+      "hours": "Tue to Sun, 10:00 to 19:00",
+      "lat": 19.1738,
+      "lng": -96.1342
+    },
+    {
+      "id": "puebla",
+      "name": "Puebla",
+      "label": "Branch",
+      "address": "Av. Juarez 1500, La Paz, Puebla, Pue.",
+      "phone": "(222) 555-0121",
+      "hours": "Mon to Sat, 10:00 to 20:00",
+      "lat": 19.0414,
+      "lng": -98.2063
+    },
+    {
+      "id": "cdmx",
+      "name": "Mexico City",
+      "label": "Branch",
+      "address": "Av. Alvaro Obregon 120, Roma Norte, CDMX",
+      "phone": "(55) 5555-0176",
+      "hours": "Mon to Sat, 10:00 to 20:00",
+      "lat": 19.4326,
+      "lng": -99.1332
+    }
+  ]
+}

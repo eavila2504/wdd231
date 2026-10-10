@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adelia Studio | Thank you</title>
+    <meta name="description" content="Thank you for booking with Adelia Studio. We will contact you soon to confirm your visit."> 
+    <meta name="author" content="Eli Avila">
+    <meta name="robots" content="noindex">
+
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="styles/adelia.css">
+    <link rel="stylesheet" href="styles/adelia-larger.css">
+    <link rel="stylesheet" href="styles/thankyou.css">
+
+    <!-- scripts -->
+    <script type="module" src="scripts/thankyou.js"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- favicon -->
+    <link rel="icon" href="favicon-a.ico">
+
+    <!-- Open Graph meta tags -->
+    <meta property="og:title" content="Adelia Studio">
+    <meta property="og:description" content="Thank you for booking with Adelia Studio. We will contact you soon to confirm your visit.">
+    <meta property="og:image" content="https://eavila2504.github.io/wdd231/final/images/og-cover.webp">
+    <meta property="og:url" content="https://adelia-studio.org">
+</head>
+<body>
+    <header class="site-header">
+    <div class="brand">
+        <img src="images/adelia-icon.svg" alt="adelia studio minimalist icon" width="40" height="40">
+        <span class="brand-name">Adelia</span><br class="brand-break"> <span>Studio</span>
+    </div>
+
+    <nav id="primary-nav" class="primary-nav">
+        <ul>
+            <li><a href="index.html" >Home</a></li>
+            <li><a href="testimonies.html">Testimonies</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="book.html">Book</a></li>
+        </ul>
+    </nav>
+
+    <div class="header-controls">
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-pressed="false" aria-label="Switch to dark mode" title="Switch to dark mode">
+            <svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true">
+                <circle cx="11" cy="11" r="9" fill="none" stroke="currentColor" stroke-width="1.6"/>
+                <path d="M11 2a9 9 0 0 0 0 18Z" fill="currentColor"/>
+            </svg>
+        </button>
+        <button type="button" id="nav-toggle" class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</header>
+    <main>
+        <section class="thanks">
+            <h1 id="thanks-title">Thank you!</h1>
+            <p id="thanks-intro" class="thanks-intro">We received your request.</p>
+
+            <!-- thankyou.js fills this list with the data from the form (read from the URL) -->
+            <dl id="summary" class="summary" hidden></dl>
+
+            <div class="thanks-actions">
+                <a class="hero-cta" href="index.html">Back to home</a>
+                <a id="book-again" class="link-button" href="book.html">Book another visit</a>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="site-footer">
+    <div class="footer-col footer-contact">
+        <p class="footer-org">Adelia Studio</p>
+        <address>
+            calle palma 322<br>
+            Poza Rica, Ver. Mexico 74300<br>
+            <a href="mailto:adelias@skincare.com">adelias@skincare.com</a><br>
+            <a href="tel:+2235552300">(223) 555-2300</a>
+        </address>
+    </div>
+
+  <div class="footer-col footer-social">
+        <a href="https://www.facebook.com" target="_blank"><img src="images/facebook-a.svg" alt="Facebook svg icon" width="16" height="16"></a>
+        <a href="https://www.youtube.com/" target="_blank"><img src="images/youtube-a.svg" alt="Youtube svg icon" width="16" height="16"></a>
+        <a href="https://www.instagram.com/adelia.studio_03/" target="_blank"><img src="images/instagram-a.svg" alt="Instagram svg icon" width="16" height="16"></a>
+    </div>
+
+    <div class="footer-col footer-meta">
+        <p>WDD231 Final Project</p>
+        <p>Eli Avila</p>
+        <p>&copy; <span id="currentyear"></span> Adelia Studio</p>
+        <p id="lastModified"></p>
+    </div>
+</footer>
+</body>
+</html>

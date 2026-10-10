@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adelia Studio | Book</title>
-    <meta name="description" content="A little space where you can get help and guidance to know your ski type and what products can improve yourself."> 
+    <meta name="description" content="A little space where you can get help and guidance to know your skin type and what products can improve yourself."> 
     <meta name="author" content="Eli Avila">
 
     <!-- stylesheet -->
@@ -13,7 +13,9 @@
     <link rel="stylesheet" href="styles/book.css">
 
     <!-- scripts -->
-    <script type="module" src="scripts/book.js" ></script>
+   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script type="module" src="scripts/book.js"></script>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -86,6 +88,11 @@
                            autocomplete="tel" title="Your mobile phone number"
                            placeholder="987-555-1234">
                 </label>
+                <label class="field-wide">Preferred branch
+    <select name="branch" id="branch-select">
+        <option value="">No preference</option>
+    </select>
+</label>
  
                 <label class="field-wide">Tell us about your skin
                     <textarea name="feedback" required
@@ -103,6 +110,14 @@
                 <input type="submit" value="Know my skin" class="submit-button">
             </form>
         </div>
+
+        <!--map section-->
+        <aside class="branches">
+    <h2>Our branches</h2>
+    <div id="branches-map" role="region" aria-label="Map of Adelia Studio branches"></div>
+    <ul id="branches-list" class="branches-list"></ul>
+</aside>
+
     </main>
     
     <footer class="site-footer">
